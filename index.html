@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física 2º EM</title>
+</head>
+<body>
+    <h1>Física 2º EM</h1>
+    <p>3º Bimestre - 2026</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 02 — Guia para as Bússolas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f4f8;
+            color: #222;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #2c5aa0, #4a80d6);
+            color: white;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #2c5aa0;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid #4a80d6;
+        }
+        h3 {
+            color: #333;
+            margin: 1.5rem 0 0.8rem;
+        }
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+        li {
+            margin-bottom: 0.6rem;
+        }
+        .ilustracao {
+            background: white;
+            border: 1px solid #cce0f5;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(44,90,160,0.08);
+        }
+        .ilustracao svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .destaque {
+            background-color: #e8f0fc;
+            border-left: 4px solid #2c5aa0;
+            padding: 1.2rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        .link-simulador {
+            display: inline-block;
+            background-color: #2c5aa0;
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 0.5rem;
+            transition: background 0.3s;
+        }
+        .link-simulador:hover {
+            background-color: #1f427a;
+        }
+        .nota {
+            font-size: 0.95rem;
+            color: #444;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aula 02 — Guia para as Bússolas</h1>
+    <p style="margin:0; opacity:0.9;">Entenda o campo magnético, as linhas de força e como a bússola funciona</p>
+</header>
+
+<h2>Campo Magnético</h2>
+
+<p>O campo magnético é a região ao redor de um ímã ou de um corpo magnetizado onde atuam forças magnéticas. No caso da Terra, existe um campo magnético terrestre que se estende do interior do planeta para o espaço. É esse campo que orienta a agulha da bússola.</p>
+
+<div class="ilustracao">
+    <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- Ímã de barra -->
+        <rect x="80" y="90" width="240" height="40" rx="6" fill="url(#gradImã)" stroke="#333" stroke-width="2"/>
+        <text x="120" y="117" fill="white" font-size="20" font-weight="bold">N</text>
+        <text x="270" y="117" fill="white" font-size="20" font-weight="bold">S</text>
+
+        <!-- Linhas de campo -->
+        <path d="M80,110 A120,80 0 0,1 200,30 A120,80 0 0,1 320,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
+        <path d="M80,110 A100,60 0 0,1 200,50 A100,60 0 0,1 320,110" fill="none" stroke="#4a80d6" stroke-width="2" marker-end="url(#seta)"/>
+        <path d="M80,110 A80,40 0 0,1 200,70 A80,40 0 0,1 320,110" fill="none" stroke="#6a98e8" stroke-width="2" marker-end="url(#seta)"/>
+        <path d="M80,110 A80,40 0 0,0 200,150 A80,40 0 0,0 320,110" fill="none" stroke="#6a98e8" stroke-width="2" marker-end="url(#seta)"/>
+        <path d="M80,110 A100,60 0 0,0 200,170 A100,60 0 0,0 320,110" fill="none" stroke="#4a80d6" stroke-width="2" marker-end="url(#seta)"/>
+        <path d="M80,110 A120,80 0 0,0 200,190 A120,80 0 0,0 320,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
+
+        <!-- Bússola -->
+        <circle cx="350" cy="50" r="28" fill="white" stroke="#333" stroke-width="2"/>
+        <polygon points="350,26 356,44 344,44" fill="red"/>
+        <polygon points="350,74 356,56 344,56" fill="#333"/>
+        <text x="344" y="22" font-size="11" fill="red">N</text>
+
+        <!-- Definições -->
+        <defs>
+            <linearGradient id="gradImã" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#d32f2f"/>
+                <stop offset="50%" stop-color="#1976d2"/>
+            </linearGradient>
+            <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <polygon points="0,0 10,5 0,10" fill="#2c5aa0"/>
+            </marker>
+        </defs>
+    </svg>
+    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">Linhas de campo magnético saindo do polo Norte e entrando no polo Sul</p>
+</div>
+
+<p><strong>Algumas características importantes:</strong></p>
+<ul>
+    <li>As linhas do campo magnético saem do polo norte de um ímã e entram no polo sul (fora do ímã).</li>
+    <li>A Terra se comporta como um grande ímã devido ao movimento do ferro líquido em seu núcleo.</li>
+    <li>A agulha da bússola se alinha com esse campo, indicando a direção do norte magnético.</li>
+    <li>O campo magnético é mais intenso próximo aos polos magnéticos e mais fraco em regiões mais distantes.</li>
+</ul>
+
+<p>Além de orientar bússolas, o campo magnético da Terra tem uma função essencial: protege o planeta contra parte das partículas carregadas emitidas pelo Sol, ajudando a preservar a atmosfera e a vida na Terra.</p>
+
+<h2>Linhas de Campo Magnético</h2>
+
+<p>As linhas de campo magnético são linhas imaginárias usadas para representar a direção e a intensidade do campo magnético ao redor de um ímã ou da Terra.</p>
+
+<p><strong>Suas principais características são:</strong></p>
+<ul>
+    <li>Indicam a direção do campo magnético. A agulha de uma bússola fica tangente a essas linhas.</li>
+    <li>Fora de um ímã, as linhas saem do polo norte e entram no polo sul.</li>
+    <li>Dentro do ímã, elas retornam do polo sul para o polo norte, formando circuitos fechados.</li>
+    <li>Quanto mais próximas umas das outras, mais intenso é o campo magnético naquela região. Por isso, o campo é mais forte perto dos polos do ímã.</li>
+    <li>As linhas de campo nunca se cruzam, pois em cada ponto existe apenas uma direção para o campo magnético.</li>
+</ul>
+
+<div class="destaque">
+    <p><strong>💡 Experimento simples:</strong> Coloque um ímã sob uma folha de papel e espalhe limalha de ferro sobre ela. A limalha se organiza sozinha, desenhando as linhas do campo magnético!</p>
+</div>
+
+<h2>Vetor Campo Magnético</h2>
+
+<p>O vetor campo magnético, representado por <strong>⃗B</strong>, é uma grandeza vetorial que indica a direção, o sentido e a intensidade do campo magnético em cada ponto do espaço.</p>
+
+<div class="ilustracao">
+    <svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Linha curva de campo -->
+        <path d="M40,90 Q160,30 280,90" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6,4"/>
+        <!-- Vetor tangente -->
+        <line x1="150" y1="60" x2="190" y2="80" stroke="#d32f2f" stroke-width="3"/>
+        <polygon points="190,80 182,72 184,84" fill="#d32f2f"/>
+        <circle cx="170" cy="70" r="4" fill="#222"/>
+        <text x="200" y="75" font-size="16" fill="#d32f2f" font-weight="bold">⃗B</text>
+        <text x="145" y="50" font-size="11" fill="#444">Linha de campo</text>
+        <text x="155" y="105" font-size="11" fill="#444">Vetor tangente à linha</text>
+    </svg>
+    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">O vetor campo magnético é sempre tangente à linha de campo em cada ponto</p>
+</div>
+
+<p><strong>As características do vetor campo magnético são:</strong></p>
+<ul>
+    <li><strong>Direção:</strong> é tangente à linha de campo magnético no ponto considerado.</li>
+    <li><strong>Sentido:</strong> fora de um ímã, vai do polo norte para o polo sul.</li>
+    <li><strong>Intensidade (módulo):</strong> é maior onde as linhas de campo estão mais próximas e menor onde elas estão mais afastadas.</li>
+    <li>A unidade do campo magnético no Sistema Internacional (SI) é o <strong>tesla (T)</strong>.</li>
+</ul>
+
+<p>Exemplo: Se uma bússola é colocada em determinado ponto, a agulha se orienta na mesma direção e sentido do vetor campo magnético (⃗B) naquele local. Assim, a agulha indica a direção das linhas do campo magnético.</p>
+
+<div class="destaque">
+    <p><strong>🧪 Teste na prática!</strong> Vocês podem observar isso no simulador gratuito:</p>
+    <a href="https://phet.colorado.edu/pt_BR/simulations/magnet-and-compass" target="_blank" class="link-simulador">Simulador "Ímã e Bússola" — PhET/USP</a>
+</div>
+
+<h2>Ação do Campo Magnético sobre uma Bússola</h2>
+
+<p>A ação do campo magnético sobre uma bússola ocorre porque a agulha da bússola é, na verdade, um pequeno ímã.</p>
+
+<div class="ilustracao">
+    <svg width="360" height="200" viewBox="0 0 360 200" xmlns="http://www.w3.org/2000/svg">
+        <!-- Campo de fundo -->
+        <defs>
+            <marker id="setaCampo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <polygon points="0,0 10,5 0,10" fill="#4a80d6"/>
+            </marker>
+        </defs>
+        <line x1="40" y1="60" x2="320" y2="60" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
+        <line x1="40" y1="100" x2="320" y2="100" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
+        <line x1="40" y1="140" x2="320" y2="140" stroke="#4a80d6" stroke-width="2" marker-end="url(#setaCampo)"/>
+        <text x="300" y="48" font-size="11" fill="#2c5aa0">sentido do campo</text>
+
+        <!-- Bússola desalinhada -->
+        <circle cx="100" cy="100" r="35" fill="white" stroke="#333" stroke-width="2"/>
+        <polygon points="100,70 108,92 92,92" fill="red" transform="rotate(-30,100,100)"/>
+        <polygon points="100,130 108,108 92,108" fill="#333" transform="rotate(-30,100,100)"/>
+        <text x="88" y="155" font-size="11" fill="#555">Desalinhada</text>
+
+        <!-- Seta de transição -->
+        <path d="M150,100 L180,100 M172,92 L180,100 L172,108" stroke="#333" stroke-width="2" fill="none"/>
+
+        <!-- Bússola alinhada -->
+        <circle cx="260" cy="100" r="35" fill="white" stroke="#333" stroke-width="2"/>
+        <polygon points="260,70 268,92 252,92" fill="red"/>
+        <polygon points="260,130 268,108 252,108" fill="#333"/>
+        <text x="248" y="155" font-size="11" fill="#555">Alinhada com o campo</text>
+    </svg>
+    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">O torque faz a agulha girar até se alinhar com o campo magnético</p>
+</div>
+
+<p>Quando a bússola é colocada em um campo magnético:</p>
+<ul>
+    <li>O campo magnético exerce um <strong>torque</strong> (momento de força) sobre a agulha.</li>
+    <li>Esse torque faz a agulha girar até que ela fique alinhada com as linhas do campo magnético.</li>
+    <li>A extremidade norte da agulha passa a indicar o sentido do vetor campo magnético naquele ponto.</li>
+</ul>
+
+<p>Por isso, quando você gira a caixa da bússola, a agulha continua se movendo até voltar a apontar na direção do campo magnético da Terra. Em resumo: o campo magnético não empurra a bússola para um lado; ele faz a agulha girar até que ela fique alinhada com o campo magnético. Essa propriedade permite que a bússola indique a direção do norte magnético.</p>
+
+<h2>Ímã e Bússola</h2>
+
+<p>Um ímã e uma bússola estão profundamente relacionados, porque ambos envolvem campos magnéticos.</p>
+
+<div class="ilustracao">
+    <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+        <!-- Ímã à esquerda -->
+        <rect x="30" y="90" width="140" height="45" rx="6" fill="url(#gradImã2)" stroke="#333" stroke-width="2"/>
+        <text x="55" y="118" fill="white" font-size="22" font-weight="bold">N</text>
+        <text x="135" y="118" fill="white" font-size="22" font-weight="bold">S</text>
+
+        <!-- Linha de força -->
+        <path d="M170,110 Q230,50 290,110" fill="none" stroke="#2c5aa0" stroke-width="2" marker-end="url(#seta)"/>
+
+        <!-- Bússola à direita -->
+        <circle cx="310" cy="110" r="40" fill="white" stroke="#333" stroke-width="2"/>
+        <polygon points="310,75 319,102 301,102" fill="red"/>
+        <polygon points="310,145 319,118 301,118" fill="#333"/>
+        <text x="302" y="68" font-size="12" fill="red">N</text>
+        <text x="302" y="162" font-size="11" fill="#555">agulha alinhada</text>
+
+        <defs>
+            <linearGradient id="gradImã2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="50%" stop-color="#d32f2f"/>
+                <stop offset="50%" stop-color="#1976d2"/>
+            </linearGradient>
+            <marker id="seta" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                <polygon points="0,0 10,5 0,10" fill="#2c5aa0"/>
+            </marker>
+        </defs>
+    </svg>
+    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">A agulha da bússola se alinha ao campo produzido pelo ímã</p>
+</div>
+
+<ul>
+    <li>Um ímã produz um campo magnético ao seu redor, com um polo Norte (N) e um polo Sul (S).</li>
+    <li>A bússola possui uma pequena agulha imantada que funciona como um pequeno ímã.</li>
+    <li>Quando a bússola é colocada perto de um ímã, o campo magnético do ímã exerce uma força sobre a agulha, fazendo-a girar e se alinhar com o campo.</li>
+    <li><strong>Polos opostos se atraem (N–S) e polos iguais se repelem (N–N ou S–S).</strong></li>
+</ul>
+
+<p>A bússola funciona porque a própria Terra age como um grande ímã: o campo magnético terrestre orienta a agulha para o norte magnético. Assim, tanto um ímã comum quanto a Terra conseguem influenciar a direção da agulha da bússola.</p>
+
+<h2>Campo Magnético Terrestre</h2>
+
+<p>O campo magnético terrestre é o campo magnético produzido pela Terra, que se comporta como um grande ímã.</p>
+
+<div class="ilustracao">
+    <svg width="380" height="300" viewBox="0 0 380 300" xmlns="http://www.w3.org/2000/svg">
+        <!-- Terra -->
+        <circle cx="190" cy="160" r="90" fill="#b3d9ff" stroke="#2c5aa0" stroke-width="3"/>
+        <ellipse cx="190" cy="160" rx="120" ry="140" fill="none" stroke="#4a80d6" stroke-width="2" stroke-dasharray="8,4" opacity="0.6"/>
+        <ellipse cx="190" cy="160" rx="150" ry="170" fill="none" stroke="#4a80d6" stroke-width="2" stroke-dasharray="8,4" opacity="0.4"/>
+
+        <!-- Polos -->
+        <text x="175" y="80" font-size="14" font-weight="bold" fill="#d32f2f">Norte Magnético</text>
+        <text x="175" y="260" font-size="14" font-weight="bold" fill="#1976d2">Sul Magnético</text>
+
+        <!-- Linhas de campo -->
+        <path d="M190,70 A120,140 0 0,1 190,250" fill="none" stroke="#d32f2f" stroke-width="3" marker-end="url(#setaTerra)"/>
+        <path d="M190,70 A150,170 0 0,1 190,250" fill="none" stroke="#d32f2f" stroke-width="2" marker-end="url(#setaTerra)"/>
+
+        <!-- Bússola na superfície -->
+        <circle cx="280" cy="130" r="30" fill="white" stroke="#333" stroke-width="2"/>
+        <polygon points="280,105 287,125 273,125" fill="red"/>
+        <polygon points="280,155 287,135 273,135" fill="#333"/>
+        <text x="272" y="100" font-size="10" fill="red">N</text>
+
+        <defs>
+            <marker id="setaTerra" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+                <polygon points="0,0 10,5 0,10" fill="#d32f2f"/>
+            </marker>
+        </defs>
+    </svg>
+    <p style="font-size:0.9rem; color:#444; margin-top:0.5rem;">A Terra como um grande ímã — a agulha da bússola aponta para o Norte Magnético</p>
+</div>
+
+<p><strong>Principais características:</strong></p>
+<ul>
+    <li><strong>Origem:</strong> é gerado principalmente pelo movimento do ferro e do níquel líquidos no núcleo externo da Terra, criando correntes elétricas que produzem o campo magnético.</li>
+    <li><strong>Ação sobre bússolas:</strong> o campo terrestre orienta a agulha da bússola, fazendo-a apontar aproximadamente para o norte magnético.</li>
+    <li><strong>Polos magnéticos:</strong> a Terra possui polos magnéticos que <em>não coincidem exatamente</em> com os polos geográficos.</li>
+    <li><strong>Proteção:</strong> o campo magnético terrestre forma a <strong>magnetosfera</strong>, que ajuda a proteger o planeta contra partículas carregadas vindas do Sol.</li>
+</ul>
+
+<p class="nota">Em resumo, o campo magnético terrestre funciona como um enorme campo de força invisível ao redor da Terra, responsável pelo funcionamento das bússolas e pela proteção do planeta.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01: Marcos Históricos e Propriedades dos Materiais Magnéticos Naturais</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0, #2c5282);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #ed8936;
+            font-size: 1.4rem;
+        }
+
+        h3 {
+            color: #2d3748;
+            margin: 20px 0 10px;
+            font-size: 1.15rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .ilustracao {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .ilustracao p {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        .destaque {
+            background-color: #fef5e7;
+            border-left: 5px solid #ed8936;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .curiosidade {
+            background-color: #ebf8ff;
+            border-left: 5px solid #3182ce;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 18px 0;
+        }
+
+        .regra {
+            background-color: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 12px 0;
+        }
+
+        .regra p {
+            margin: 5px 0;
+            font-weight: 500;
+        }
+
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dashed #cbd5e0;
+            margin: 35px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aula 01: Marcos Históricos e Propriedades dos Materiais Magnéticos Naturais</h1>
+    <p>Introdução ao magnetismo, história, propriedades e comportamentos dos materiais magnéticos</p>
+</header>
+
+
+<h2>O que é magnetismo e onde surgiu o nome?</h2>
+
+<p>O termo <strong>"magnetismo"</strong> vem da Grécia Antiga. Na região de Magnésia, os gregos encontraram uma pedra escura, de brilho metálico, capaz de atrair objetos de ferro. Essa pedra é a <strong>magnetita</strong>, de fórmula química Fe₃O₄ — um óxido de ferro que possui propriedades magnéticas naturais.</p>
+
+</div>
+
+<p>O magnetismo é um fenômeno físico causado pelo movimento de cargas elétricas (como os elétrons) e pelas propriedades magnéticas dessas partículas. Ele faz com que certos materiais exerçam forças de atração ou repulsão uns sobre os outros.</p>
+
+
+<h2>Como funciona um ímã?</h2>
+
+<p>Todo ímã possui um <strong>campo magnético</strong>: uma região ao seu redor onde atua a força magnética. As linhas do campo saem do polo norte e entram pelo polo sul do ímã.</p>
+
+<div class="ilustracao">
+    <svg width="380" height="220" viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="imaN" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#e53e3e"/>
+                <stop offset="100%" stop-color="#c53030"/>
+            </linearGradient>
+            <linearGradient id="imaS" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#3182ce"/>
+                <stop offset="100%" stop-color="#2b6cb0"/>
+            </linearGradient>
+            <marker id="pontaSeta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+            </marker>
+        </defs>
+
+        <path d="M 90 70 C 140 30, 240 30, 290 70" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
+        <path d="M 80 90 C 150 50, 230 50, 300 90" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
+        <path d="M 75 130 C 150 170, 230 170, 305 130" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
+        <path d="M 90 150 C 140 190, 240 190, 290 150" stroke="#4a5568" stroke-width="2" fill="none" marker-end="url(#pontaSeta)"/>
+
+        <rect x="80" y="100" width="100" height="50" rx="6" fill="url(#imaN)"/>
+        <text x="130" y="132" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
+
+        <rect x="200" y="100" width="100" height="50" rx="6" fill="url(#imaS)"/>
+        <text x="250" y="132" text-anchor="middle" fill="white" font-size="22" font-weight="bold">S</text>
+
+        <text x="190" y="205" text-anchor="middle" fill="#2d3748" font-size="13">Linhas do campo magnético: saem do Norte e entram pelo Sul</text>
+    </svg>
+    <p>Esquema: Linhas do campo magnético ao redor de um ímã em forma de barra.</p>
+</div>
+
+<div class="regra">
+    <p>✅ Polos iguais (N–N ou S–S) se <strong>repelem</strong>.</p>
+    <p>✅ Polos diferentes (N–S) se <strong>atraem</strong>.</p>
+</div>
+
+
+<h2>De onde vem o magnetismo?</h2>
+
+<p>Nos átomos, os elétrons giram em torno do núcleo e também possuem uma propriedade chamada <strong>spin</strong>. Esses movimentos geram pequenos campos magnéticos.</p>
+
+
+<p>Na maioria dos materiais, esses campos estão orientados em direções aleatórias e se cancelam. Já em materiais como <strong>ferro, níquel e cobalto</strong>, muitos desses pequenos campos podem se alinhar, formando um ímã.</p>
+
+<div class="curiosidade">
+    <strong>Curiosidade:</strong> A própria Terra funciona como um grande ímã! O movimento do ferro líquido no núcleo terrestre gera um campo magnético que protege o planeta de partículas vindas do Sol e permite o funcionamento das bússolas.
+</div>
+
+<p>Em resumo, o magnetismo é a interação entre campos magnéticos produzidos por cargas elétricas em movimento e pelos momentos magnéticos dos elétrons. É uma das manifestações da <strong>força eletromagnética</strong>, uma das quatro forças fundamentais da natureza.</p>
+
+
+<hr>
+
+<h2>Magnetismo na China Antiga</h2>
+
+<p>Os chineses conheciam o magnetismo antes mesmo dos gregos! Entre 300 a.C. e 220 a.C., usavam um instrumento chamado <strong>Si Nan</strong>: uma colher de magnetita sobre uma base lisa. Quando em equilíbrio, o cabo da colher sempre apontava para o sul — esse é o antecessor da bússola.</p>
+
+
+</div>
+
+<p>No século VI, já fabricavam ímãs artificiais e agulhas imantadas. Entre os séculos X e XI, passaram a usar bússolas na navegação marítima — muito antes dos europeus, que só começaram a usar no século XIII.</p>
+
+
+<hr>
+
+<h2>Polos magnéticos</h2>
+
+<p>São as duas extremidades de um ímã: <strong>polo norte (N)</strong> e <strong>polo sul (S)</strong>. É nelas que a força magnética é mais intensa.</p>
+
+<div class="ilustracao">
+    <svg width="340" height="160" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="gradN" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#fc8181"/>
+                <stop offset="100%" stop-color="#e53e3e"/>
+            </linearGradient>
+            <linearGradient id="gradS" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#63b3ed"/>
+                <stop offset="100%" stop-color="#3182ce"/>
+            </linearGradient>
+        </defs>
+
+        <rect x="30" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
+        <text x="80" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
+
+        <rect x="210" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
+        <text x="260" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
+
+        <path d="M 145 40 L 175 60 L 145 80" stroke="#e53e3e" stroke-width="4" fill="none"/>
+        <path d="M 175 40 L 145 60 L 175 80" stroke="#e53e3e" stroke-width="4" fill="none"/>
+        <text x="160" y="115" text-anchor="middle" fill="#c53030" font-weight="bold">REPELEM</text>
+
+        <text x="170" y="155" text-anchor="middle" fill="#2d3748" font-size="13">Polos iguais se repelem</text>
+    </svg>
+    <p>Esquema: Força de repulsão entre polos norte.</p>
+</div>
+
+<div class="ilustracao">
+    <svg width="340" height="160" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="55" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
+        <text x="80" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
+
+        <rect x="210" y="55" width="100" height="50" rx="6" fill="url(#gradS)" stroke="#2b6cb0" stroke-width="2"/>
+        <text x="260" y="87" text-anchor="middle" fill="white" font-size="22" font-weight="bold">S</text>
+
+        <path d="M 145 65 L 190 65 L 190 50 L 210 70 L 190 90 L 190 75 L 145 75 Z" fill="#48bb78"/>
+        <text x="170" y="115" text-anchor="middle" fill="#2f855a" font-weight="bold">ATRAEM</text>
+
+        <text x="170" y="155" text-anchor="middle" fill="#2d3748" font-size="13">Polos diferentes se atraem</text>
+    </svg>
+    <p>Esquema: Força de atração entre polos opostos.</p>
+</div>
+
+<p>Quando um ímã é suspenso livremente, seu polo norte aponta aproximadamente para o norte geográfico da Terra.</p>
+
+<div class="destaque">
+    <strong>Regra importante:</strong> Não é possível isolar um único polo magnético! Se um ímã for quebrado ao meio, cada pedaço forma um novo ímã, com seu próprio N e S.
+</div>
+
+<p>Os polos magnéticos são essenciais para bússolas, motores elétricos, geradores, alto-falantes e aparelhos de ressonância magnética.</p>
+
+
+<hr>
+
+<h2>Estudos científicos na Europa</h2>
+
+<ul style="margin-left:25px; margin-bottom:18px;">
+    <li><strong>1269 — Pierre Pèlerin de Maricourt:</strong> descobriu que todo ímã tem dois polos (N e S) e descreveu as regras de atração e repulsão.</li>
+    <li><strong>1600 — William Gilbert:</strong> publicou <em>De Magnete</em>. Explicou a imantação por indução e afirmou que a Terra se comporta como um grande ímã. É chamado de "pai do magnetismo experimental".</li>
+    <li><strong>1820 — Hans Christian Ørsted:</strong> mostrou que corrente elétrica gera magnetismo.</li>
+    <li><strong>1831 — Michael Faraday:</strong> descobriu que variações no campo magnético geram corrente elétrica.</li>
+    <li><strong>1865 — James Clerk Maxwell:</strong> uniu eletricidade e magnetismo em uma única teoria: o <strong>eletromagnetismo</strong>.</li>
+</ul>
+
+
+<hr>
+
+<h2>Diferenças entre eletricidade e magnetismo</h2>
+
+<div class="ilustracao">
+    <svg width="380" height="200" viewBox="0 0 380 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="pos" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fc8181"/>
+                <stop offset="100%" stop-color="#e53e3e"/>
+            </linearGradient>
+            <linearGradient id="neg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#63b3ed"/>
+                <stop offset="100%" stop-color="#3182ce"/>
+            </linearGradient>
+        </defs>
+
+        <rect x="20" y="20" width="150" height="160" rx="8" fill="#fef5e7" stroke="#ecc94b" stroke-width="2"/>
+        <text x="95" y="45" text-anchor="middle" fill="#b7791f" font-weight="bold">Eletricidade</text>
+        <circle cx="60" cy="90" r="28" fill="url(#pos)"/>
+        <text x="60" y="98" text-anchor="middle" fill="white" font-size="24" font-weight="bold">+</text>
+        <circle cx="130" cy="90" r="28" fill="url(#neg)"/>
+        <text x="130" y="98" text-anchor="middle" fill="white" font-size="24" font-weight="bold">−</text>
+        <text x="95" y="155" text-anchor="middle" font-size="12">Cargas podem existir sozinhas</text>
+
+        <rect x="210" y="20" width="150" height="160" rx="8" fill="#ebf8ff" stroke="#4299e1" stroke-width="2"/>
+        <text x="285" y="45" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Magnetismo</text>
+        <rect x="235" y="70" width="100" height="45" rx="5" fill="url(#gradN)"/>
+        <text x="265" y="98" text-anchor="middle" fill="white" font-weight="bold">N</text>
+        <rect x="285" y="70" width="60" height="45" rx="5" fill="url(#gradS)"/>
+        <text x="315" y="98" text-anchor="middle" fill="white" font-weight="bold">S</text>
+        <text x="285" y="155" text-anchor="middle" font-size="12">Polos N e S SEMPRE juntos</text>
+    </svg>
+    <p>Esquema comparativo: Cargas elétricas podem estar separadas; polos magnéticos nunca existem separados.</p>
+</div>
+
+<p><strong>Eletricidade:</strong> existem cargas positivas e negativas que podem existir sozinhas — podemos ter apenas um próton (+) ou apenas um elétron (−).</p>
+<p><strong>Magnetismo:</strong> não existem polos isolados! Não existe "apenas polo norte" ou "apenas polo sul" na natureza. Todo ímã é um <strong>dipolo magnético</strong>: tem sempre os dois polos juntos.</p>
+
+<div class="destaque">
+    <strong>Pergunta:</strong> Se eu cortar um ímã ao meio, o que acontece?<br>
+    ✅ Não separo o norte do sul — cada pedacinho vira um <strong>novo ímã completo</strong>, com seu próprio N e S! Mesmo se cortar em pedaços muito pequenos.
+</div>
+
+
+<hr>
+
+<h2>Domínios magnéticos</h2>
+
+<p>São pequenas regiões dentro de materiais ferromagnéticos (ferro, níquel, cobalto) nas quais os pequenos ímãs atômicos estão todos alinhados na mesma direção.</p>
+
+<div class="ilustracao">
+    <svg width="360" height="220" viewBox="0 0 360 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <marker id="setaDir" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#2b6cb0"/>
+            </marker>
+        </defs>
+
+        <text x="90" y="30" text-anchor="middle" font-weight="bold">Sem campo magnético</text>
+        <text x="90" y="48" text-anchor="middle" font-size="12"></text>
+        <rect x="30" y="55" width="120" height="120" fill="#f7fafc" stroke="#cbd5e0" stroke-width="2" rx="4"/>
+        <g stroke="#2b6cb0" stroke-width="2" marker-end="url(#setaDir)">
+            <line x1="45" y1="75" x2="65" y2="75"/>
+            <line x1="80" y1="75" x2="60" y2="95"/>
+            <line x1="95" y1="75" x2="95" y2="95"/>
+            <line x1="130" y1="75" x2="110" y2="95"/>
+            <line x1="45" y1="105" x2="75" y2="105"/>
+            <line x1="85" y1="105" x2="65" y2="125"/>
+            <line x1="100" y1="105" x2="130" y2="105"/>
+            <line x1="45" y1="135" x2="65" y2="135"/>
+            <line x1="80" y1="135" x2="60" y2="155"/>
+            <line x1="95" y1="135" x2="125" y2="135"/>
+            <line x1="130" y1="135" x2="110" y2="155"/>
+        </g>
+
+        <text x="270" y="30" text-anchor="middle" font-weight="bold">Com campo magnético</text>
+        <text x="270" y="48" text-anchor="middle" font-size="12"></text>
+        <rect x="210" y="55" width="120" height="120" fill="#ebf8ff" stroke="#4299e1" stroke-width="2" rx="4"/>
+        <g stroke="#e53e3e" stroke-width="3" marker-end="url(#setaDir)">
+            <line x1="225" y1="75" x2="315" y2="75"/>
+            <line x1="225" y1="95" x2="315" y2="95"/>
+            <line x1="225" y1="115" x2="315" y2="115"/>
+            <line x1="225" y1="135" x2="315" y2="135"/>
+            <line x1="225" y1="155" x2="315" y2="155"/>
+        </g>
+
+        <text x="180" y="205" text-anchor="middle" fill="#2d3748" font-size="13">Alinhamento dos domínios cria o ímã</text>
+    </svg>
+    <p>Esquema: Como os domínios se alinham quando submetidos a um campo magnético.</p>
+</div>
+
+<p>Em um material não magnetizado, os domínios apontam em direções aleatórias e se cancelam. Sob a ação de um campo magnético externo, os domínios se alinham e o material se torna magnético.</p>
+<p>Alguns materiais perdem o alinhamento rapidamente; outros o mantêm, tornando-se ímãs permanentes.</p>
+
+
+<hr>
+
+<h2>Dipolos magnéticos</h2>
+
+<p>Todo sistema que possui um polo norte e um polo sul é um <strong>dipolo magnético</strong>. Em nível atômico, cada átomo funciona como um pequeno dipolo, criado pelo spin e pelo movimento dos elétrons.</p>
+<p>Como não existem monopolos isolados, ao quebrar qualquer ímã surgem sempre novos dipolos menores, cada um com os dois polos.</p>
+
+
+<hr>
+
+<h2>Por que o ímã atrai o ferro?</h2>
+
+<div class="ilustracao">
+    <svg width="340" height="180" viewBox="0 0 340 180" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="65" width="100" height="50" rx="6" fill="url(#gradN)" stroke="#c53030" stroke-width="2"/>
+        <text x="80" y="97" text-anchor="middle" fill="white" font-size="22" font-weight="bold">N</text>
+
+        <rect x="210" y="65" width="90" height="50" rx="6" fill="#e2e8f0" stroke="#a0aec0" stroke-width="2"/>
+        <path d="M 225 75 L 270 75 M 235 85 L 280 85 M 225 95 L 270 95 M 235 105 L 280 105" stroke="#4a5568" stroke-width="2" marker-end="url(#setaDir)"/>
+
+        <path d="M 145 80 L 190 80 L 190 65 L 210 85 L 190 105 L 190 90 L 145 90 Z" fill="#48bb78"/>
+
+        <rect x="210" y="65" width="45" height="50" rx="6" fill="url(#gradS)" stroke="#2b6cb0" stroke-width="2" opacity="0.9"/>
+        <text x="232" y="97" text-anchor="middle" fill="white" font-size="16" font-weight="bold">S</text>
+
+        <text x="170" y="165" text-anchor="middle" fill="#2d3748" font-size="13"></text>
+    </svg>
+    <p>Esquema: O ímã reorienta os domínios do ferro, criando um polo oposto na face mais próxima — e por isso se atraem.</p>
+</div>
+
+<p>Quando aproximamos um ímã de um pedaço de ferro, os dipolos do ferro se reorganizam: o lado mais próximo ganha um polo <strong>oposto</strong> ao do ímã. Como polos opostos se atraem, o ferro é puxado em direção ao ímã — e isso acontece tanto com polo norte quanto com polo sul!</p>
+
+</body>
+</html>
+
+
+
+
+
+</main>
+
+<footer>
+    Prof.Valter@2026
+</footer>
+
+</body>
+</html>
