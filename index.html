@@ -1524,13 +1524,789 @@
 
         
         <div class="conteudo-aula" id="aula-5">
-            <h2>Aula 05</h2>
-            <p>Conteúdo da Aula 05...</p>
+            <h2>Aula 05: Aula 5: Movimento de partículas - Do lançamento obliquo ao movimento circular</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05: Movimento de Partículas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #3182ce;
+        }
+
+        h1 {
+            color: #2b6cb0;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2c5282;
+            font-size: 1.4rem;
+            margin: 35px 0 15px;
+            padding-left: 12px;
+            border-left: 4px solid #4299e1;
+        }
+
+        h3 {
+            color: #2b6cb0;
+            font-size: 1.1rem;
+            margin: 25px 0 12px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        .formula-box {
+            background-color: #ebf8ff;
+            border: 2px solid #90cdf4;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c5282;
+        }
+
+        .info-box {
+            background-color: #f7fafc;
+            border-left: 5px solid #48bb78;
+            padding: 15px 20px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .rule-box {
+            background-color: #fffaf0;
+            border-left: 5px solid #ed8936;
+            padding: 15px 20px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            background: #f7fafc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .summary-table th, .summary-table td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .summary-table th {
+            background-color: #3182ce;
+            color: white;
+        }
+
+        .summary-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .svg-container {
+            display: flex;
+            justify-content: center;
+            margin: 25px 0;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .svg-figure {
+            text-align: center;
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .svg-figure figcaption {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            font-style: italic;
+        }
+
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .step {
+            padding: 10px 15px;
+            background: #ebf8ff;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .step:not(:last-child)::after {
+            content: "↓";
+            position: absolute;
+            left: 50%;
+            bottom: -18px;
+            font-size: 18px;
+            color: #3182ce;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            font-weight: 600;
+            color: #2b6cb0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aula 05: Movimento de partículas: do lançamento oblíquo ao movimento circular</h1>
+        </header>
+
+        <h2>A intensidade da força magnética</h2>
+        <p>Elas podem ser explicadas pela fórmula da força magnética:</p>
+
+        <div class="formula-box">
+            F<sub>mag</sub> = q · B · v · senθ
         </div>
+
+        <p>Em que:</p>
+        <ul>
+            <li><strong>q</strong> = carga elétrica;</li>
+            <li><strong>v</strong> = velocidade da partícula;</li>
+            <li><strong>B</strong> = intensidade do campo magnético;</li>
+            <li><strong>θ</strong> = ângulo entre a velocidade e o campo magnético.</li>
+        </ul>
+
+        <p>Assim:</p>
+        <ul>
+            <li>Maior carga → maior força magnética, pois F<sub>mag</sub> é proporcional a |q|.</li>
+            <li>Maior velocidade → maior força magnética, pois F<sub>mag</sub> é proporcional a v.</li>
+            <li>Ângulo de 0° → força igual a zero, porque sen0° = 0. A partícula se movimenta paralelamente ao campo.</li>
+            <li>Ângulo de 90° → força máxima, porque sen90° = 1. A força é perpendicular à velocidade e pode mudar a direção da trajetória da partícula.</li>
+        </ul>
+
+        <div class="info-box">
+            <strong>Resumo:</strong> a força magnética é máxima quando a velocidade é perpendicular ao campo e nula quando é paralela a ele.
+        </div>
+
+        <p>Juntando todas essas informações, temos a fórmula apresentada, de onde nota-se:</p>
+        <ul>
+            <li><strong>q = 0</strong> → não há carga elétrica → F<sub>mag</sub> = 0</li>
+            <li><strong>v = 0</strong> → a partícula está parada → F<sub>mag</sub> = 0</li>
+            <li><strong>B = 0</strong> → não há campo magnético → F<sub>mag</sub> = 0</li>
+            <li><strong>θ = 0° ou 180°</strong> → movimento paralelo ou antiparalelo ao campo → senθ = 0 → F<sub>mag</sub> = 0</li>
+            <li>Quando <strong>θ = 90°</strong>: sen90° = 1 → F<sub>mag</sub> = |q| · B · v → força magnética <strong>máxima</strong></li>
+        </ul>
+
+        <h2>Movimento de cargas elétricas em um campo magnético uniforme</h2>
+        <p>A ideia principal é: se a partícula é lançada na mesma direção do campo magnético (B), então o ângulo entre a velocidade e o campo é θ = 0°.</p>
+        <p>Como sen0° = 0, temos: F<sub>mag</sub> = 0.</p>
+        <p>Portanto, não existe força magnética atuando sobre a partícula. Sem força magnética, a velocidade não sofre alteração. Considerando a ausência de outras forças, a partícula mantém:</p>
+        <ul>
+            <li>velocidade constante;</li>
+            <li>direção constante;</li>
+            <li>trajetória em linha reta.</li>
+        </ul>
+        <p>Portanto, ela realiza um <strong>Movimento Retilíneo Uniforme (MRU)</strong>.</p>
+
+        <div class="rule-box">
+            <strong>Regra para lembrar:</strong><br>
+            🔹 v paralela a B → F<sub>mag</sub> = 0 → MRU<br>
+            🔹 v perpendicular a B → força magnética máxima → trajetória pode ser circular
+        </div>
+
+        <h2>Velocidade perpendicular ao campo magnético</h2>
+        <p>Esse é um dos casos mais importantes do movimento de cargas em campo magnético uniforme. Quando a velocidade é perpendicular ao campo (θ = 90°):</p>
+        <p>F<sub>mag</sub> = |q| · B · v · sen90° = |q| · B · v</p>
+        <p>A força magnética fica perpendicular à velocidade da partícula. Por isso, ela não aumenta nem diminui o módulo da velocidade — apenas muda sua direção. Como a força permanece apontando para o centro da trajetória, funciona como uma <strong>força centrípeta</strong>, fazendo a partícula realizar um <strong>Movimento Circular Uniforme (MCU)</strong>.</p>
+
+        <div class="svg-container">
+            <figure class="svg-figure">
+                <svg width="240" height="180" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowB" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2b6cb0"/>
+                        </marker>
+                        <marker id="arrowV" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e53e3e"/>
+                        </marker>
+                        <marker id="arrowF" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#48bb78"/>
+                        </marker>
+                    </defs>
+                    <rect width="240" height="180" fill="#f7fafc" rx="8"/>
+                    <text x="120" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d3748">v paralelo a B → MRU</text>
+                    <line x1="40" y1="90" x2="200" y2="90" stroke="#2b6cb0" stroke-width="3" marker-end="url(#arrowB)"/>
+                    <text x="210" y="75" font-size="13" fill="#2b6cb0">B</text>
+                    <circle cx="80" cy="90" r="6" fill="#e53e3e"/>
+                    <line x1="86" y1="90" x2="130" y2="90" stroke="#e53e3e" stroke-width="2.5" marker-end="url(#arrowV)"/>
+                    <text x="100" y="80" font-size="13" fill="#e53e3e">v</text>
+                    <text x="120" y="140" text-anchor="middle" font-size="12" fill="#4a5568">θ = 0° → F = 0</text>
+                </svg>
+                <figcaption>Velocidade paralela às linhas de campo → movimento retilíneo</figcaption>
+            </figure>
+
+            <figure class="svg-figure">
+                <svg width="240" height="180" viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowB2" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2b6cb0"/>
+                        </marker>
+                        <marker id="arrowV2" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#e53e3e"/>
+                        </marker>
+                        <marker id="arrowF2" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#48bb78"/>
+                        </marker>
+                    </defs>
+                    <rect width="240" height="180" fill="#f7fafc" rx="8"/>
+                    <text x="120" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d3748">v perpendicular a B → MCU</text>
+                    <circle cx="120" cy="95" r="50" fill="none" stroke="#e53e3e" stroke-width="3"/>
+                    <circle cx="120" cy="95" r="5" fill="#e53e3e"/>
+                    <line x1="120" y1="95" x2="120" y2="45" stroke="#48bb78" stroke-width="2.5" marker-end="url(#arrowF2)"/>
+                    <text x="125" y="70" font-size="12" fill="#48bb78">F</text>
+                    <path d="M 120 45 A 50 50 0 0 1 163 60" fill="none" stroke="#e53e3e" stroke-width="2.5" marker-end="url(#arrowV2)"/>
+                    <text x="155" y="52" font-size="12" fill="#e53e3e">v</text>
+                    <text x="30" y="100" font-size="13" fill="#2b6cb0">⨀ B</text>
+                    <text x="120" y="160" text-anchor="middle" font-size="12" fill="#4a5568">θ = 90° → F máxima</text>
+                </svg>
+                <figcaption>Velocidade perpendicular → movimento circular uniforme</figcaption>
+            </figure>
+        </div>
+
+        <p>Como a força magnética atua como força centrípeta, podemos igualar as duas forças, e a carga, a velocidade e o campo magnético determinam o <strong>raio da trajetória</strong>. Quanto maior o raio, menos curvada será a trajetória.</p>
+
+        <h2>Trajetória helicoidal</h2>
+        <p>Quando a velocidade é <strong>oblíqua</strong> em relação ao campo, podemos decompor a velocidade em duas componentes:</p>
+        <ul>
+            <li><strong>Componente paralela (v∥):</strong> não sofre força magnética → mantém movimento retilíneo uniforme ao longo do campo.</li>
+            <li><strong>Componente perpendicular (v⊥):</strong> sofre força magnética → movimento circular.</li>
+        </ul>
+        <p>🔄 Movimento circular + ➡️ Movimento retilíneo = trajetória em forma de hélice!</p>
+
+        <div class="svg-container">
+            <figure class="svg-figure">
+                <svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <marker id="arrowB3" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="8" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#2b6cb0"/>
+                        </marker>
+                    </defs>
+                    <rect width="300" height="200" fill="#f7fafc" rx="8"/>
+                    <text x="150" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d3748">Trajetória Helicoidal</text>
+                    <line x1="30" y1="100" x2="270" y2="100" stroke="#2b6cb0" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrowB3)"/>
+                    <text x="275" y="90" font-size="13" fill="#2b6cb0">B</text>
+                    <path d="M 50 100 C 70 60, 90 140, 110 100 C 130 60, 150 140, 170 100 C 190 60, 210 140, 230 100 C 250 60, 270 140, 290 100" 
+                          fill="none" stroke="#e53e3e" stroke-width="3"/>
+                    <text x="150" y="170" text-anchor="middle" font-size="12" fill="#4a5568">v∥ → avança + v⊥ → curva = hélice</text>
+                </svg>
+                <figcaption>Velocidade oblíqua → trajetória helicoidal</figcaption>
+            </figure>
+        </div>
+
+        <table class="summary-table">
+            <thead>
+                <tr>
+                    <th>Velocidade em relação a B</th>
+                    <th>Trajetória</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>v paralela a B</td>
+                    <td>Retilínea (MRU)</td>
+                </tr>
+                <tr>
+                    <td>v perpendicular a B</td>
+                    <td>Circular (MCU)</td>
+                </tr>
+                <tr>
+                    <td>v oblíqua a B</td>
+                    <td>Helicoidal</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="info-box">
+            <strong>Ideia principal:</strong> a componente perpendicular curva a trajetória, enquanto a componente paralela faz a partícula avançar ao longo das linhas do campo.
+        </div>
+
+        <h2>Aurora Boreal e Aurora Austral</h2>
+        <p>As auroras são um exemplo real e espetacular de partículas carregadas interagindo com o campo magnético terrestre! O processo simplificado:</p>
+
+        <ol>
+            <li><strong>Partículas do Sol:</strong> o Sol libera partículas eletricamente carregadas — elétrons e íons.</li>
+            <li><strong>Campo magnético da Terra:</strong> ao chegarem à região da Terra, sofrem a ação da força magnética.</li>
+            <li><strong>Movimento das partículas:</strong> seguem trajetórias circulares ou helicoidais, acompanhando as linhas do campo magnético.</li>
+            <li><strong>Regiões polares:</strong> as linhas de campo convergem nos polos, direcionando e concentrando as partículas nessas regiões.</li>
+            <li><strong>Formação da aurora:</strong> ao colidirem com gases da alta atmosfera (oxigênio e nitrogênio), transferem energia. Ao retornarem a estados de menor energia, os átomos liberam essa energia na forma de luz.</li>
+        </ol>
+
+        <div class="svg-container">
+            <figure class="svg-figure">
+                <svg width="300" height="280" viewBox="0 0 300 280" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="earthGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#63b3ed"/>
+                            <stop offset="100%" stop-color="#2b6cb0"/>
+                        </linearGradient>
+                        <linearGradient id="auroraGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" stop-color="#68d391" stop-opacity="0.8"/>
+                            <stop offset="100%" stop-color="#9ae6b4" stop-opacity="0.2"/>
+                        </linearGradient>
+                        <marker id="arrowLine" viewBox="0 0 10 6" refX="10" refY="3" markerWidth="6" markerHeight="6" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#718096"/>
+                        </marker>
+                    </defs>
+                    <rect width="300" height="280" fill="#f7fafc" rx="8"/>
+                    <text x="150" y="25" text-anchor="middle" font-size="14" font-weight="bold" fill="#2d3748">Auroras e Campo Magnético Terrestre</text>
+                    
+                    <!-- Sol e partículas -->
+                    <circle cx="50" cy="60" r="25" fill="#f6e05e"/>
+                    <text x="50" y="65" text-anchor="middle" font-size="11" font-weight="bold">Sol</text>
+                    <path d="M 75 55 L 110 75" stroke="#e53e3e" stroke-width="2" marker-end="url(#arrowLine)"/>
+                    <path d="M 75 65 L 110 85" stroke="#e53e3e" stroke-width="2" marker-end="url(#arrowLine)"/>
+                    <text x="85" y="45" font-size="10" fill="#e53e3e">partículas</text>
+                    
+                    <!-- Terra -->
+                    <ellipse cx="190" cy="140" rx="45" ry="55" fill="url(#earthGrad)" stroke="#2c5282" stroke-width="2"/>
+                    <text x="190" y="145" text-anchor="middle" font-size="12" fill="white" font-weight="bold">Terra</text>
+                    
+                    <!-- Linhas de campo magnético -->
+                    <path d="M 190 85 C 260 60, 260 220, 190 195" fill="none" stroke="#718096" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowLine)"/>
+                    <path d="M 190 95 C 240 80, 240 200, 190 185" fill="none" stroke="#718096" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowLine)"/>
+                    <path d="M 190 195 C 120 220, 120 60, 190 85" fill="none" stroke="#718096" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowLine)"/>
+                    <path d="M 190 185 C 140 200, 140 80, 190 95" fill="none" stroke="#718096" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowLine)"/>
+                    
+                    <!-- Aurora -->
+                    <path d="M 160 85 C 165 60, 185 55, 190 50 C 195 55, 215 60, 220 85 L 210 95 L 170 95 Z" fill="url(#auroraGrad)"/>
+                    <path d="M 160 195 C 165 220, 185 225, 190 230 C 195 225, 215 220, 220 195 L 210 185 L 170 185 Z" fill="url(#auroraGrad)"/>
+                    
+                    <!-- Rótulos -->
+                    <text x="190" y="45" text-anchor="middle" font-size="11" fill="#2f855a" font-weight="bold">Aurora Boreal</text>
+                    <text x="190" y="245" text-anchor="middle" font-size="11" fill="#2f855a" font-weight="bold">Aurora Austral</text>
+                    <text x="260" y="120" font-size="10" fill="#718096">Linhas de B</text>
+                </svg>
+                <figcaption>Partículas seguem linhas do campo magnético e geram auroras nos polos</figcaption>
+            </figure>
+        </div>
+
+        <div class="process-flow">
+            <div class="step">☀️ Partículas carregadas vindas do Sol</div>
+            <div class="step">🧲 Sofrem ação do campo magnético da Terra</div>
+            <div class="step">🌀 Seguem trajetórias helicoidais ao longo das linhas de campo</div>
+            <div class="step">🌎 São direcionadas às regiões polares</div>
+            <div class="step">⚛️ Colidem com oxigênio e nitrogênio da atmosfera</div>
+            <div class="step">✨ Liberação de energia → luz das auroras</div>
+        </div>
+
+        <ul style="margin-top: 25px;">
+            <li><strong>Aurora Boreal:</strong> Hemisfério Norte</li>
+            <li><strong>Aurora Austral:</strong> Hemisfério Sul</li>
+        </ul>
+
+        <div class="rule-box">
+            <strong>Conclusão:</strong> A força magnética atua principalmente mudando a direção do movimento das partículas carregadas, produzindo trajetórias circulares ou helicoidais. O campo magnético terrestre funciona como um guia, levando essas partículas aos polos — onde nascem as belas auroras!
+        </div>
+    </div>
+</body>
+</html></p>
+        </div>
+
+
+
+
+
+        
         <div class="conteudo-aula" id="aula-6">
-            <h2>Aula 06</h2>
-            <p>Conteúdo da Aula 06...</p>
+            <h2>Aula 06: Aula 6: Problemas com cargas elétricas em campo uniforme</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Problemas com Cargas Elétricas em Campo Uniforme</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e8f0fe 0%, #f3e5f5 100%);
+            color: #2d3748;
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2b6cb0 0%, #805ad5 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2b6cb0;
+            margin: 30px 0 18px;
+            border-left: 5px solid #805ad5;
+            padding-left: 12px;
+            font-size: 1.4rem;
+        }
+
+        .formula-box {
+            background: #fef5e7;
+            border: 2px solid #f6ad55;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #c05621;
+            box-shadow: 0 3px 8px rgba(246,173,85,0.2);
+        }
+
+        .var-list {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-left: 4px solid #4299e1;
+        }
+
+        .var-list p {
+            margin: 10px 0;
+        }
+
+        .angle-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+            margin: 25px 0;
+        }
+
+        .card {
+            background: white;
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-top: 4px solid #48bb78;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2f855a;
+            margin-bottom: 8px;
+        }
+
+        .svg-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .svg-container p {
+            margin-top: 12px;
+            font-size: 0.95rem;
+            color: #4a5568;
+            font-style: italic;
+        }
+
+        .summary-box {
+            background: #ebf8ff;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 25px 0;
+            border: 2px solid #90cdf4;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #2b6cb0;
+        }
+
+        .real-world {
+            background: #faf5ff;
+            border-radius: 12px;
+            padding: 22px;
+            margin: 25px 0;
+            border: 2px solid #d6bcfa;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aula 06: Problemas com Cargas Elétricas em Campo Uniforme</h1>
+    <p>Força Magnética, Trajetórias e Aplicações Práticas</p>
+</header>
+
+<section>
+    <h2>🧲 Força Magnética</h2>
+    <div class="formula-box">
+        F<sub>mag</sub> = q · B · v · sen θ
+    </div>
+
+    <div class="var-list">
+        <p><strong>F<sub>mag</sub></strong> → intensidade da força magnética, medida em newtons (N).</p>
+        <p><strong>q</strong> → valor da carga elétrica da partícula, medido em coulombs (C). Quanto maior a carga, maior a força magnética.</p>
+        <p><strong>B</strong> → intensidade do campo magnético, medida em teslas (T). Um campo magnético mais intenso produz uma força maior.</p>
+        <p><strong>v</strong> → velocidade da carga, medida em metros por segundo (m/s). Quanto maior a velocidade, maior a força.</p>
+        <p><strong>θ</strong> (teta) → ângulo entre a direção do movimento da carga e a direção do campo magnético.</p>
+    </div>
+</section>
+
+<section>
+    <h2>📐 Influência do Ângulo θ</h2>
+    <p>O termo <strong>sen θ</strong> determina quanto da força magnética será produzida:</p>
+
+    <div class="angle-cards">
+        <div class="card">
+            <h3>θ = 0°</h3>
+            <p>sen 0° = 0</p>
+            <p><strong>F<sub>mag</sub> = 0</strong></p>
+            <p>Carga se move <em>paralelamente</em> ao campo magnético.</p>
         </div>
+        <div class="card" style="border-top-color: #ecc94b;">
+            <h3>θ = 90°</h3>
+            <p>sen 90° = 1</p>
+            <p><strong>Força máxima!</strong></p>
+            <p>Movimento <em>perpendicular</em> ao campo magnético.</p>
+        </div>
+        <div class="card" style="border-top-color: #fc8181;">
+            <h3>θ = 180°</h3>
+            <p>sen 180° = 0</p>
+            <p><strong>F<sub>mag</sub> = 0</strong></p>
+            <p>Movimento paralelo, mas em <em>sentido contrário</em>.</p>
+        </div>
+    </div>
+
+    <p style="margin-top: 15px; font-weight: 500;">✅ A força magnética é <span class="highlight">máxima</span> quando a carga se movimenta perpendicularmente ao campo e é <span class="highlight">nula</span> quando se movimenta paralelamente a ele.</p>
+</section>
+
+<section>
+    <h2>🔄 Direção da Força e Trajetória Circular</h2>
+    <p>Se a velocidade for <strong>perpendicular</strong> ao campo magnético, a força também será perpendicular à velocidade. Isso significa que a força <em>não altera o módulo da velocidade</em>, mas muda continuamente sua direção.</p>
+    <p>➡️ A partícula segue uma <strong>trajetória circular</strong>, com a força magnética atuando como <em>força centrípeta</em>, mantendo-a em movimento circular uniforme.</p>
+
+    <div class="svg-container">
+        <svg width="320" height="240" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+            <!-- Campo magnético (linhas verticais) -->
+            <defs>
+                <marker id="arrowB" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#2b6cb0" />
+                </marker>
+                <marker id="arrowV" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#e53e3e" />
+                </marker>
+                <marker id="arrowF" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#38a169" />
+                </marker>
+            </defs>
+            
+            <!-- Linhas do campo magnético -->
+            <line x1="40" y1="30" x2="40" y2="210" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowB)" opacity="0.6"/>
+            <line x1="80" y1="30" x2="80" y2="210" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowB)" opacity="0.6"/>
+            <line x1="120" y1="30" x2="120" y2="210" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrowB)" opacity="0.6"/>
+            <text x="135" y="125" fill="#2b6cb0" font-weight="bold">B</text>
+
+            <!-- Círculo da trajetória -->
+            <circle cx="220" cy="120" r="70" fill="none" stroke="#805ad5" stroke-width="3" stroke-dasharray="6,4"/>
+            
+            <!-- Partícula -->
+            <circle cx="220" cy="50" r="9" fill="#e53e3e"/>
+            
+            <!-- Vetor velocidade -->
+            <line x1="220" y1="50" x2="265" y2="50" stroke="#e53e3e" stroke-width="3" marker-end="url(#arrowV)"/>
+            <text x="270" y="55" fill="#e53e3e" font-weight="bold">v</text>
+            
+            <!-- Vetor força -->
+            <line x1="220" y1="50" x2="220" y2="95" stroke="#38a169" stroke-width="3" marker-end="url(#arrowF)"/>
+            <text x="225" y="85" fill="#38a169" font-weight="bold">Fmag</text>
+            
+            <!-- Centro -->
+            <circle cx="220" cy="120" r="4" fill="#333"/>
+            <text x="225" y="125" font-size="11px">Centro</text>
+            
+            <text x="180" y="215" fill="#805ad5" font-size="13px">Trajetória Circular</text>
+        </svg>
+        <p>Figura: Carga se movendo perpendicularmente ao campo → trajetória circular com força magnética apontando para o centro.</p>
+    </div>
+</section>
+
+<section>
+    <h2>📏 Raio da Trajetória</h2>
+    <p>O raio da trajetória circular depende das propriedades da partícula e do campo magnético:</p>
+    
+    <div class="formula-box">
+        r = (m · v) / (|q| · B)
+    </div>
+
+    <div class="summary-box">
+        <p>🔹 <strong>Massa (m):</strong> quanto maior a massa, <span class="highlight">maior</span> o raio. A curva é mais aberta.</p>
+        <p>🔹 <strong>Velocidade (v):</strong> quanto maior a velocidade, <span class="highlight">maior</span> o raio. Trajetória maior.</p>
+        <p>🔹 <strong>Campo magnético (B):</strong> quanto mais intenso, <span class="highlight">menor</span> o raio. Curva mais fechada.</p>
+        <p>🔹 <strong>Carga (|q|):</strong> quanto maior a carga, <span class="highlight">menor</span> o raio. Força mais intensa curva mais a trajetória.</p>
+        <hr style="margin:12px 0; border-color:#90cdf4;">
+        <p>📌 <strong>Resumo:</strong> massa e velocidade maiores → raio maior; campo e carga maiores → raio menor.</p>
+    </div>
+</section>
+
+<section>
+    <h2>🌀 Trajetória Helicoidal</h2>
+    <p>Quando a carga entra no campo com velocidade <strong>oblíqua</strong> (não paralela nem perpendicular), descreve uma trajetória em forma de <strong>hélice</strong>: avança ao longo das linhas do campo enquanto gira ao redor delas.</p>
+
+    <div class="svg-container">
+        <svg width="400" height="220" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Linhas do campo -->
+            <defs>
+                <marker id="arrB2" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                    <path d="M0,0 L8,4 L0,8 Z" fill="#2b6cb0" />
+                </marker>
+            </defs>
+            <line x1="50" y1="110" x2="370" y2="110" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arrB2)" opacity="0.4"/>
+            <text x="360" y="100" fill="#2b6cb0" font-weight="bold">B</text>
+
+            <!-- Hélice -->
+            <path d="M60,110 
+                C80,60 100,160 120,110
+                C140,60 160,160 180,110
+                C200,60 220,160 240,110
+                C260,60 280,160 300,110
+                C320,60 340,160 360,110" 
+                fill="none" stroke="#805ad5" stroke-width="4" stroke-linecap="round"/>
+            
+            <!-- Partícula -->
+            <circle cx="360" cy="110" r="9" fill="#e53e3e"/>
+            <text x="340" y="95" fill="#e53e3e" font-size="11px">partícula</text>
+            
+            <text x="140" y="190" fill="#805ad5" font-size="14px">Trajetória Helicoidal</text>
+            <text x="120" y="210" fill="#666" font-size="11px">Avança ao longo do campo + movimento circular</text>
+        </svg>
+        <p>Exemplo real: partículas do vento solar seguem trajetórias helicoidais no campo magnético da Terra, formando as auroras.</p>
+    </div>
+
+    <div class="real-world">
+        <h3>🌍 Aplicação: Campo Magnético da Terra</h3>
+        <p>Prótons e elétrons vindos do Sol interagem com o campo terrestre e seguem trajetórias helicoidais, concentradas nas regiões dos polos. É esse fenômeno que causa as <strong>auroras boreais e austrais</strong>.</p>
+    </div>
+</section>
+
+<section>
+    <h2>🏥 Quando a Força Magnética Salva Vidas: O Cíclotron</h2>
+    <p>No <strong>cíclotron</strong>, um campo magnético exerce força perpendicular à velocidade das partículas, funcionando como uma força centrípeta e fazendo com que sigam trajetória circular em vez de irem em linha reta.</p>
+    <p>Um campo elétrico acelera as partículas, aumentando sua velocidade a cada volta. O campo magnético continua curvando a trajetória, formando uma <strong>espiral</strong> de raio crescente até a partícula atingir a energia necessária.</p>
+
+    <div class="svg-container">
+        <svg width="300" height="260" viewBox="0 0 300 260" xmlns="http://www.w3.org/2000/svg">
+            <!-- Espiral -->
+            <path d="M150,130 
+                a10,10 0 1,1 20,0
+                a20,20 0 1,1 -40,0
+                a30,30 0 1,1 60,0
+                a40,40 0 1,1 -80,0
+                a50,50 0 1,1 100,0
+                a60,60 0 1,1 -120,0
+                a70,70 0 1,1 140,0" 
+                fill="none" stroke="#ed8936" stroke-width="3" stroke-linecap="round"/>
+            
+            <!-- Partícula e seta indicando crescimento -->
+            <circle cx="220" cy="130" r="8" fill="#e53e3e"/>
+            <path d="M220,130 L245,105" stroke="#e53e3e" stroke-width="2" marker-end="url(#arrowV)"/>
+            
+            <!-- Divisão dos D's -->
+            <path d="M150,60 L150,200" stroke="#4a5568" stroke-width="2" stroke-dasharray="5,5"/>
+            <text x="100" y="50" fill="#4a5568" font-size="12px">Campo Elétrico acelera</text>
+            <text x="170" y="50" fill="#4a5568" font-size="12px">Campo Magnético curva</text>
+            
+            <text x="90" y="240" fill="#ed8936" font-size="14px">Cíclotron: raio aumenta com a velocidade</text>
+        </svg>
+        <p>O campo magnético <em>não acelera</em> diretamente — ele funciona como um <strong>guia</strong> que direciona a trajetória para que as partículas atinjam o alvo com precisão. Usado em medicina para tratamentos como o câncer.</p>
+    </div>
+</section>
+
+<footer>
+    📚 Aula 06 — Física: Eletromagnetismo | Cargas em Campo Magnético Uniforme
+</footer>
+
+</body>
+</html></p>
+        </div>
+
+
+
+        
         <div class="conteudo-aula" id="aula-7">
             <h2>Aula 07</h2>
             <p>Conteúdo da Aula 07...</p>
