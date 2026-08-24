@@ -2441,8 +2441,220 @@
     <div class="item-aula">
         <button class="botao-aula" data-aula="8">Aula 08</button>
         <div class="conteudo-aula" id="aula-8">
-            <h2>Aula 08</h2>
-            <p>Conteúdo da Aula 08...</p>
+            <h2>Aula 08: Campo magnético por corrente: resolva com a regra da mão direita
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 08: Campo Magnético por Corrente — Regra da Mão Direita</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid #2b6cb0;
+        }
+
+        h1 {
+            color: #2b6cb0;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: #2c5282;
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .ilustracao {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .ilustracao svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .conteudo {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .destaque {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .lista-efeitos {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .lista-efeitos li {
+            margin-bottom: 0.6rem;
+        }
+
+        .resumo {
+            background-color: #fef5e7;
+            border-left: 4px solid #ed8936;
+            padding: 1.2rem;
+            border-radius: 0 8px 8px 0;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        .legenda {
+            font-size: 0.95rem;
+            color: #4a5568;
+            margin-top: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+       
+        <p>Aprenda a determinar o sentido e a intensidade do campo magnético usando a regra da mão direita</p>
+    </header>
+
+    <div class="conteudo">
+
+        <h2>Corrente elétrica e campo magnético</h2>
+
+        <p>As linhas de campo magnético formadas por um fio retilíneo percorrido por corrente elétrica têm o formato de circunferências concêntricas ao redor do fio.</p>
+
+        <p>A direção do campo magnético é sempre perpendicular ao fio e, portanto, perpendicular ao sentido da corrente naquele ponto. Para descobrir o sentido das linhas, usamos a <strong>regra da mão direita</strong>: apontando o polegar da mão direita no sentido da corrente, os dedos curvados indicam o sentido do campo magnético.</p>
+
+        <!-- Ilustração: Regra da Mão Direita + Linhas de Campo -->
+        <div class="ilustracao">
+            <svg width="620" height="320" viewBox="0 0 620 320" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fio vertical -->
+                <line x1="310" y1="40" x2="310" y2="280" stroke="#2b6cb0" stroke-width="6" stroke-linecap="round"/>
+                
+                <!-- Seta corrente -->
+                <polygon points="310,50 300,70 320,70" fill="#2b6cb0"/>
+                <text x="325" y="75" fill="#2b6cb0" font-size="16" font-weight="bold">Corrente (i)</text>
+
+                <!-- Linhas de campo concêntricas -->
+                <circle cx="310" cy="160" r="40" fill="none" stroke="#ed8936" stroke-width="2" stroke-dasharray="6 4"/>
+                <circle cx="310" cy="160" r="75" fill="none" stroke="#ed8936" stroke-width="2" stroke-dasharray="6 4"/>
+                <circle cx="310" cy="160" r="110" fill="none" stroke="#ed8936" stroke-width="2" stroke-dasharray="6 4"/>
+
+                <!-- Setas sentido do campo -->
+                <path d="M350,160 A40,40 0 0,1 310,200" fill="none" stroke="#ed8936" stroke-width="3" marker-end="url(#seta-campo)"/>
+                <path d="M385,160 A75,75 0 0,1 310,235" fill="none" stroke="#ed8936" stroke-width="3" marker-end="url(#seta-campo)"/>
+                <path d="M420,160 A110,110 0 0,1 310,270" fill="none" stroke="#ed8936" stroke-width="3" marker-end="url(#seta-campo)"/>
+
+                <!-- Mão direita -->
+                <g transform="translate(100, 100)">
+                    <!-- Punho -->
+                    <path d="M20,60 L40,80 L70,75 L60,45 Z" fill="#fbd38d" stroke="#ed8936" stroke-width="2"/>
+                    <!-- Polegar -->
+                    <path d="M40,45 L10,10 L25,5 L50,40 Z" fill="#fbd38d" stroke="#ed8936" stroke-width="2"/>
+                    <!-- Dedos curvados -->
+                    <path d="M50,40 Q60,20 80,15 Q100,10 110,30" fill="none" stroke="#ed8936" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M55,48 Q70,28 90,23 Q110,18 118,38" fill="none" stroke="#ed8936" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M60,55 Q75,38 95,33 Q115,28 123,48" fill="none" stroke="#ed8936" stroke-width="6" stroke-linecap="round"/>
+                </g>
+
+                <!-- Marcador de seta -->
+                <defs>
+                    <marker id="seta-campo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+                        <polygon points="0,0 10,5 0,10" fill="#ed8936"/>
+                    </marker>
+                </defs>
+
+                <!-- Legendas -->
+                <text x="80" y="240" fill="#2d3748" font-size="15" font-weight="bold">Polegar → corrente</text>
+                <text x="80" y="265" fill="#2d3748" font-size="15" font-weight="bold">Dedos → sentido do campo</text>
+                <text x="440" y="165" fill="#ed8936" font-size="15" font-weight="bold">Linhas de campo B</text>
+            </svg>
+            <p class="legenda">Figura 1 — Regra da mão direita e linhas de campo magnético ao redor de um fio retilíneo</p>
+        </div>
+
+
+        <h2>Intensidade do campo magnético</h2>
+
+        <div class="destaque">
+            <p>A intensidade do campo magnético depende diretamente da corrente elétrica e inversamente da distância até o fio:</p>
+        </div>
+
+        <!-- Esquema de relações -->
+        <div class="ilustracao">
+            <svg width="580" height="260" viewBox="0 0 580 260" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fio -->
+                <line x1="290" y1="30" x2="290" y2="230" stroke="#2b6cb0" stroke-width="6" stroke-linecap="round"/>
+                <text x="300" y="250" fill="#2b6cb0" font-size="14" font-weight="bold">Fio com corrente i</text>
+
+                <!-- Linhas de campo com espessura variável -->
+                <circle cx="290" cy="130" r="45" fill="none" stroke="#ed8936" stroke-width="5" opacity="0.9"/>
+                <circle cx="290" cy="130" r="85" fill="none" stroke="#ed8936" stroke-width="3" opacity="0.65"/>
+                <circle cx="290" cy="130" r="125" fill="none" stroke="#ed8936" stroke-width="1.5" opacity="0.4"/>
+
+                <!-- Rótulos -->
+                <text x="345" y="135" fill="#2d3748" font-size="14">B mais intenso</text>
+                <text x="440" y="135" fill="#2d3748" font-size="13">↓</text>
+                <text x="450" y="135" fill="#2d3748" font-size="13">menos intenso</text>
+
+                <!-- Relações -->
+                <g font-size="15" fill="#2d3748">
+                    <text x="30" y="60">↑ Corrente i → ↑ Campo B</text>
+                    <text x="30" y="90">↓ Corrente i → ↓ Campo B</text>
+                    <text x="30" y="130">↑ Distância R → ↓ Campo B</text>
+                    <text x="30" y="160">↓ Distância R → ↑ Campo B</text>
+                </g>
+            </svg>
+            <p class="legenda">Figura 2 — Relação entre intensidade do campo, corrente e distância</p>
+        </div>
+
+        <ul class="lista-efeitos">
+            <li><strong>Aumentando a corrente i</strong> → o campo magnético fica mais intenso.</li>
+            <li><strong>Diminuindo a corrente i</strong> → o campo fica mais fraco.</li>
+            <li><strong>Aumentando a distância R do fio</strong> → o campo fica mais fraco.</li>
+            <li><strong>Diminuindo a distância R</strong> → o campo fica mais intenso.</li>
+        </ul>
+
+        <div class="resumo">
+            Em resumo: quanto maior a corrente e quanto mais perto do fio, maior é a intensidade do campo magnético.
+        </div>
+
+    </div>
+
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="8">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="8">🏠 Voltar ao Início</button>
@@ -2452,6 +2664,11 @@
         </div>
     </div>
 
+
+
+
+
+  
     <!-- Aula 09 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="9">Aula 09</button>
@@ -2529,9 +2746,9 @@
 
     <!-- Aula 14 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="14">Aula 14 — Conclusão</button>
+        <button class="botao-aula" data-aula="14">Aula 14</button>
         <div class="conteudo-aula" id="aula-14">
-            <h2>Aula 14 — Conclusão</h2>
+            <h2>Aula 14</h2>
             <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="14">⬅ Aula Anterior</button>
