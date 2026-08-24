@@ -2179,8 +2179,250 @@
     <div class="item-aula">
         <button class="botao-aula" data-aula="7">Aula 07</button>
         <div class="conteudo-aula" id="aula-7">
-            <h2>Aula 07</h2>
-            <p>Conteúdo da Aula 07...</p>
+            <h2>Aula 07: Quando a corrente desvia a bússola: Oersted e o campo magnético
+</h2>
+            <p><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07: Quando a corrente desvia a bússola — Oersted e o campo magnético</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
+        body {
+            background-color: #f0f4f8;
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #2b6cb0, #2c5282);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #2b6cb0;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        h3 {
+            color: #2c5282;
+            margin: 20px 0 10px;
+        }
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+        .svg-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .formula-box {
+            background-color: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 18px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .formula {
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 12px 0;
+            font-weight: bold;
+            color: #2c5282;
+        }
+        ul {
+            margin: 12px 0 12px 30px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fef5e7;
+            padding: 12px;
+            border-radius: 6px;
+            border-left: 4px solid #ed8936;
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<section>
+    <h2>O Experimento de Oersted</h2>
+    <p>O experimento de Hans Christian Ørsted mostrou que uma corrente elétrica produz um campo magnético ao seu redor.</p>
+    <p>Assim, o caso da bússola perto da linha de transmissão pode ser explicado pelo mesmo princípio:</p>
+    <div class="highlight">
+        <strong>corrente elétrica → campo magnético → desvio da agulha da bússola</strong>
+    </div>
+    <p>A agulha normalmente se orienta pelo campo magnético da Terra, mas o campo criado pela corrente elétrica próxima pode alterar essa direção.</p>
+
+    <div class="svg-container">
+        <svg width="500" height="220" viewBox="0 0 500 220" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#2b6cb0"/>
+                </marker>
+            </defs>
+            <!-- Fio -->
+            <line x1="250" y1="30" x2="250" y2="190" stroke="#2b6cb0" stroke-width="6" stroke-linecap="round"/>
+            <text x="270" y="35" font-size="14" fill="#2b6cb0">Fio condutor</text>
+            <!-- Seta corrente -->
+            <path d="M250 50 L250 170" stroke="#e53e3e" stroke-width="3" marker-end="url(#arrowhead)"/>
+            <text x="210" y="115" font-size="14" fill="#e53e3e">Corrente</text>
+            <!-- Bússola fechada -->
+            <circle cx="380" cy="110" r="40" fill="#f7fafc" stroke="#2d3748" stroke-width="2"/>
+            <text x="370" y="80" font-size="12">N</text>
+            <text x="370" y="155" font-size="12">S</text>
+            <line x1="380" y1="110" x2="405" y2="90" stroke="#e53e3e" stroke-width="3"/>
+            <polygon points="405 90, 410 82, 400 88" fill="#e53e3e"/>
+            <text x="340" y="170" font-size="13" fill="#2d3748">Com corrente → agulha desvia</text>
+            <!-- Bússola aberta -->
+            <circle cx="100" cy="110" r="40" fill="#f7fafc" stroke="#2d3748" stroke-width="2"/>
+            <text x="90" y="80" font-size="12">N</text>
+            <text x="90" y="155" font-size="12">S</text>
+            <line x1="100" y1="110" x2="100" y2="80" stroke="#2b6cb0" stroke-width="3"/>
+            <polygon points="100 80, 105 88, 95 88" fill="#2b6cb0"/>
+            <text x="65" y="170" font-size="13" fill="#2d3748">Sem corrente → Norte real</text>
+        </svg>
+        <p style="margin-top:10px; font-style:italic; color:#4a5568;">Ilustração: sem corrente a bússola aponta para o norte; com corrente, a agulha se desvia.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Corrente Elétrica e Campo Magnético</h2>
+    <p>Nesse experimento, quando a chave é fechada, a corrente elétrica começa a passar pelo circuito e cria um campo magnético ao redor do fio. Esse campo interage com o campo magnético da Terra e faz com que a agulha da bússola se desvie da direção norte-sul.</p>
+    <p>Quando a chave é aberta, a corrente deixa de circular e a agulha tende a voltar à orientação determinada principalmente pelo campo magnético terrestre.</p>
+    <p>Isso é justamente uma demonstração do efeito magnético da corrente elétrica, observado por Ørsted.</p>
+    <p>A deflexão imediata da agulha é a evidência experimental de que a corrente elétrica produz um campo magnético ao redor do fio.</p>
+    <p>Esse fenômeno é conhecido como <strong>efeito Ørsted</strong> e demonstra a relação entre eletricidade e magnetismo. Ao interromper a corrente, o campo magnético produzido pelo fio desaparece e a agulha tende a retornar à orientação norte-sul, determinada pelo campo magnético da Terra.</p>
+</section>
+
+<section>
+    <h2>Orientação do Campo Magnético</h2>
+    <p>Nesse experimento, as linhas do campo magnético ao redor de um fio reto percorrido por corrente elétrica formam <strong>círculos concêntricos</strong>.</p>
+    <p>A direção do campo pode ser determinada pela <strong>regra da mão direita</strong>: apontando o polegar no sentido da corrente, os dedos indicam o sentido das linhas do campo magnético.</p>
+
+    <div class="svg-container">
+        <svg width="450" height="300" viewBox="0 0 450 300" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <marker id="circ-arrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+                    <polygon points="0 0, 8 3, 0 6" fill="#2b6cb0"/>
+                </marker>
+            </defs>
+            <!-- Fio central -->
+            <line x1="225" y1="40" x2="225" y2="260" stroke="#2b6cb0" stroke-width="7" stroke-linecap="round"/>
+            <text x="235" y="35" font-size="14" fill="#2b6cb0">Corrente ↓</text>
+            <!-- Círculos de campo -->
+            <circle cx="225" cy="150" r="45" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,4"/>
+            <circle cx="225" cy="150" r="85" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,4"/>
+            <circle cx="225" cy="150" r="125" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,4"/>
+            <!-- Setas de sentido -->
+            <path d="M270 150 A45 45 0 0 1 225 195" fill="none" stroke="#e53e3e" stroke-width="2" marker-end="url(#circ-arrow)"/>
+            <path d="M310 150 A85 85 0 0 1 225 235" fill="none" stroke="#e53e3e" stroke-width="2" marker-end="url(#circ-arrow)"/>
+            <path d="M350 150 A125 125 0 0 1 225 275" fill="none" stroke="#e53e3e" stroke-width="2" marker-end="url(#circ-arrow)"/>
+            <!-- Bússolas -->
+            <circle cx="330" cy="150" r="22" fill="#f7fafc" stroke="#2d3748" stroke-width="1.5"/>
+            <line x1="330" y1="150" x2="315" y2="165" stroke="#e53e3e" stroke-width="2.5"/>
+            <circle cx="225" cy="240" r="22" fill="#f7fafc" stroke="#2d3748" stroke-width="1.5"/>
+            <line x1="225" y1="240" x2="210" y2="225" stroke="#e53e3e" stroke-width="2.5"/>
+            <text x="150" y="285" font-size="13" fill="#e53e3e">Linhas de campo magnético (círculos concêntricos)</text>
+        </svg>
+        <p style="margin-top:10px; font-style:italic; color:#4a5568;">Linhas de campo magnético ao redor do fio: círculos concêntricos, tangentes à direção indicada pelas bússolas.</p>
+    </div>
+
+    <p>Nesse caso, cada bússola indica a direção do campo magnético naquele ponto.</p>
+    <p>Como o vetor campo magnético <strong>B</strong> é tangente às linhas de campo, ao observar a orientação de várias bússolas é possível reconstruir o formato das linhas, que serão circunferências concêntricas ao redor do fio.</p>
+    <div class="highlight">
+        <strong>Resumo:</strong> as bússolas mostram a direção e o sentido do campo magnético, enquanto a limalha de ferro permite visualizar o formato das linhas de campo.
+    </div>
+</section>
+
+<section>
+    <h2>A Regra da Mão Direita</h2>
+    <p>A regra da mão direita permite determinar o sentido do campo magnético produzido por um fio percorrido por corrente:</p>
+    <ul>
+        <li><strong>Polegar:</strong> sentido da corrente elétrica.</li>
+        <li><strong>Dedos curvados:</strong> sentido das linhas do campo magnético ao redor do fio.</li>
+    </ul>
+    <p>Assim, se a corrente muda de sentido, o sentido do campo magnético também se inverte.</p>
+
+    <div class="svg-container">
+        <svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+            <!-- Mão direita esquemática -->
+            <path d="M200 60 L200 160" stroke="#2b6cb0" stroke-width="5" stroke-linecap="round"/>
+            <text x="205" y="65" font-size="13" fill="#e53e3e">↑ Corrente</text>
+            <!-- Polegar -->
+            <path d="M200 60 L200 30" stroke="#e53e3e" stroke-width="6" stroke-linecap="round"/>
+            <text x="210" y="45" font-size="12" fill="#e53e3e">Polegar</text>
+            <!-- Dedos curvados -->
+            <path d="M200 90 A35 35 0 0 1 235 125" fill="none" stroke="#48bb78" stroke-width="4" stroke-linecap="round"/>
+            <path d="M200 110 A45 45 0 0 1 245 155" fill="none" stroke="#48bb78" stroke-width="4" stroke-linecap="round"/>
+            <path d="M200 130 A40 40 0 0 0 160 160" fill="none" stroke="#48bb78" stroke-width="4" stroke-linecap="round"/>
+            <text x="250" y="140" font-size="12" fill="#48bb78">Dedos = sentido do campo</text>
+            <text x="130" y="200" font-size="14" fill="#2d3748">Regra da mão direita</text>
+            <text x="110" y="222" font-size="12" fill="#718096">Polegar → corrente; dedos curvados → campo magnético</text>
+        </svg>
+    </div>
+</section>
+
+<section>
+    <h2>Intensidade do Campo Magnético</h2>
+    <p>Podemos definir uma relação matemática que permite calcular a intensidade do campo magnético (<strong>B</strong>) gerado por um fio retilíneo percorrido por corrente elétrica.</p>
+    <p>Para um fio retilíneo muito longo, a intensidade do campo magnético é dada por:</p>
+
+    <div class="formula-box">
+        <div class="formula">B = (μ · i) / (2π · R)</div>
+        <p>Onde:</p>
+        <ul>
+            <li><strong>B</strong> = intensidade do campo magnético (tesla, T);</li>
+            <li><strong>μ</strong> = permeabilidade magnética do meio;</li>
+            <li><strong>i</strong> = corrente elétrica (ampère, A);</li>
+            <li><strong>R</strong> = distância entre o fio e o ponto onde o campo é medido (metro, m).</li>
+        </ul>
+    </div>
+
+    <p>Portanto:</p>
+    <ul>
+        <li>quanto maior a corrente, maior o campo magnético;</li>
+        <li>quanto maior a distância do fio, menor o campo magnético;</li>
+        <li>o valor também depende do meio, por meio de μ.</li>
+    </ul>
+</section>
+
+
+
+  
+</body>
+</html></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="7">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="7">🏠 Voltar ao Início</button>
@@ -2190,6 +2432,11 @@
         </div>
     </div>
 
+
+
+
+
+  
     <!-- Aula 08 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="8">Aula 08</button>
@@ -2374,3 +2621,19 @@
 
 </body>
 </html>
+
+
+
+
+
+
+</main>
+
+<footer>
+    Prof.Valter@2026
+</footer>
+
+</body>
+</html>
+
+
