@@ -434,7 +434,381 @@
     </footer>
 
 </body>
-</html></p>
+</html>
+            
+            
+
+
+              <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade: Magnetismo e Ímãs — Física</title>
+    <style>
+        /* ==========================================================
+           ESTILOS GERAIS E RESPONSIVOS
+           ========================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2563eb;
+        }
+
+        h1 {
+            color: #1e40af;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .introducao {
+            background-color: #eff6ff;
+            padding: 18px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .introducao h2 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* ==========================================================
+           ILUSTRAÇÕES SVG (embutidas diretamente no código)
+           ========================================================== */
+        .ilustracao {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        }
+
+        .ilustracao p {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+
+        /* ==========================================================
+           ESTILO DAS QUESTÕES E ALTERNATIVAS
+           ========================================================== */
+        .questao {
+            background-color: #fff;
+            padding: 22px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+        }
+
+        .questao h3 {
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .alternativa {
+            display: block;
+            padding: 12px 15px;
+            margin: 8px 0;
+            background-color: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .alternativa:hover {
+            border-color: #93c5fd;
+            background-color: #eff6ff;
+        }
+
+        /* Estados após clique */
+        .alternativa.correta {
+            border-color: #22c55e;
+            background-color: #f0fdf4;
+            color: #166534;
+            font-weight: 500;
+        }
+
+        .alternativa.errada {
+            border-color: #ef4444;
+            background-color: #fef2f2;
+            color: #dc2626;
+        }
+
+        /* ==========================================================
+           ÁREA DE FEEDBACK / RESPOSTA
+           ========================================================== */
+        .feedback {
+            margin-top: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .feedback.correto {
+            display: block;
+            background-color: #f0fdf4;
+            border: 2px solid #22c55e;
+            color: #166534;
+        }
+
+        .feedback.errado {
+            display: block;
+            background-color: #fef2f2;
+            border: 2px solid #ef4444;
+            color: #b91c1c;
+        }
+
+        /* ==========================================================
+           RODAPÉ
+           ========================================================== */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 15px;
+            border-top: 1px solid #cbd5e1;
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* ==========================================================
+           AJUSTES PARA TELAS MENORES (responsividade)
+           ========================================================== */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.4rem;
+            }
+            .questao {
+                padding: 16px;
+            }
+            svg {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🧲 Magnetismo — Ímãs e Suas Propriedades</h1>
+        <p>Atividades interativas com correção ao clicar na resposta</p>
+    </header>
+
+    <!-- ==========================================================
+         INTRODUÇÃO
+         ========================================================== -->
+    <section class="introducao">
+        <h2>📚 Conceitos fundamentais</h2>
+        <p>Os ímãs possuem dois polos — <strong>Norte (N)</strong> e <strong>Sul (S)</strong>. A regra principal é: <em>polos iguais se repelem e polos opostos se atraem</em>. Além disso, não existe polo magnético isolado: ao se cortar um ímã, cada pedaço torna-se um novo ímã completo, com os dois polos.</p>
+        <p><strong>👉 Clique na alternativa que você acha correta.</strong> Se acertar, a resposta completa aparecerá. Se errar, tente novamente! A resposta correta só será mostrada quando você acertar 😉</p>
+    </section>
+
+    <!-- ==========================================================
+         ILUSTRAÇÃO 1: Ímã em barra e divisão em pedaços (SVG inline)
+         ========================================================== -->
+    <div class="ilustracao">
+        <svg width="340" height="140" viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ímã original -->
+            <rect x="20" y="20" width="300" height="40" rx="6" fill="url(#gradImã)" stroke="#333" stroke-width="2"/>
+            <text x="60" y="47" font-size="18" font-weight="bold" fill="#fff">N</text>
+            <text x="280" y="47" font-size="18" font-weight="bold" fill="#fff">S</text>
+            <!-- Linhas de divisão -->
+            <line x1="120" y1="15" x2="120" y2="65" stroke="#333" stroke-width="2" stroke-dasharray="6,4"/>
+            <line x1="220" y1="15" x2="220" y2="65" stroke="#333" stroke-width="2" stroke-dasharray="6,4"/>
+            <!-- Pedaços separados -->
+            <rect x="40" y="85" width="80" height="35" rx="5" fill="#2563eb" stroke="#333" stroke-width="2"/>
+            <text x="65" y="108" font-size="14" font-weight="bold" fill="#fff">N</text>
+            <text x="105" y="108" font-size="12" fill="#fff">S</text>
+
+            <rect x="130" y="85" width="80" height="35" rx="5" fill="#4ade80" stroke="#333" stroke-width="2"/>
+            <text x="155" y="108" font-size="14" font-weight="bold" fill="#fff">N</text>
+            <text x="195" y="108" font-size="12" fill="#fff">S</text>
+
+            <rect x="220" y="85" width="80" height="35" rx="5" fill="#dc2626" stroke="#333" stroke-width="2"/>
+            <text x="245" y="108" font-size="14" font-weight="bold" fill="#fff">N</text>
+            <text x="285" y="108" font-size="12" fill="#fff">S</text>
+
+            <defs>
+                <linearGradient id="gradImã" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#2563eb"/>
+                    <stop offset="100%" style="stop-color:#dc2626"/>
+                </linearGradient>
+            </defs>
+        </svg>
+        <p>Figura 1 — Divisão de um ímã em barra: cada pedaço forma um novo ímã completo</p>
+    </div>
+
+    <!-- ==========================================================
+         QUESTÃO 1 — FUVEST 1996
+         ========================================================== -->
+    <section class="questao" id="q1">
+        <h3>Questão 1 — Divisão de um ímã em barra (FUVEST 1996)</h3>
+        <p>Um ímã em forma de barra, com polos Norte e Sul nas extremidades, é dividido em três pedaços. Ao aproximar lado a lado os dois pedaços extremos, com as faces que estavam voltadas para o centro do ímã original se encarando, é correto afirmar que eles:</p>
+
+        <label class="alternativa" data-correta="false">
+            se atrairão, pois A é polo norte e B é polo sul.
+        </label>
+        <label class="alternativa" data-correta="true">
+            se repelirão, pois A é polo sul e B é polo norte voltados um para o outro — ou seja, polos de mesma natureza.
+        </label>
+        <label class="alternativa" data-correta="false">
+            se repelirão, pois A é polo norte e B é polo sul.
+        </label>
+        <label class="alternativa" data-correta="false">
+            não serão atraídos nem repelidos.
+        </label>
+        <label class="alternativa" data-correta="false">
+            se atrairão, pois A é polo sul e B é polo norte.
+        </label>
+
+        <div class="feedback feedback-correto">
+            <strong>✅ Correto!</strong><br>
+            Quando um ímã é cortado, cada pedaço mantém seus próprios polos Norte e Sul — <strong>não é possível separar um polo isolado</strong>. Ao dividir a barra em três partes, cada uma se torna um novo ímã completo. As faces que estavam voltadas para o centro original apresentam polos de mesma natureza quando aproximadas. Como <strong>polos iguais se repelem</strong>, os pedaços se repelirão.
+        </div>
+        <div class="feedback feedback-errado">
+            ❌ Ops! Errou. Tente novamente — pense bem nas regras de atração e repulsão magnética!
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         ILUSTRAÇÃO 2: Esfera de ferro sendo atraída (SVG inline)
+         ========================================================== -->
+    <div class="ilustracao">
+        <svg width="340" height="140" viewBox="0 0 340 140" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ímã aproximando -->
+            <rect x="20" y="50" width="90" height="40" rx="6" fill="url(#gradImã2)" stroke="#333" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" font-weight="bold" fill="#fff">N</text>
+            <text x="85" y="76" font-size="14" fill="#fff">S</text>
+            <!-- Setas de atração -->
+            <path d="M 120 70 L 160 70" stroke="#2563eb" stroke-width="3" marker-end="url(#seta)"/>
+            <path d="M 130 85 L 170 85" stroke="#2563eb" stroke-width="3" marker-end="url(#seta)"/>
+            <!-- Esfera de ferro -->
+            <circle cx="260" cy="70" r="45" fill="#94a3b8" stroke="#475569" stroke-width="2"/>
+            <text x="245" y="75" font-size="16" font-weight="bold" fill="#1e293b">Fe</text>
+            <!-- Polos induzidos na esfera -->
+            <text x="210" y="65" font-size="12" font-weight="bold" fill="#dc2626">S</text>
+
+            <defs>
+                <linearGradient id="gradImã2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#2563eb"/>
+                    <stop offset="100%" style="stop-color:#dc2626"/>
+                </linearGradient>
+                <marker id="seta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563eb" />
+                </marker>
+            </defs>
+        </svg>
+        <p>Figura 2 — Aproximação de um ímã a uma esfera de ferro: indução de polo oposto e atração</p>
+    </div>
+
+    <!-- ==========================================================
+         QUESTÃO 2 — EAM 2017
+         ========================================================== -->
+    <section class="questao" id="q2">
+        <h3>Questão 2 — Atração de materiais ferromagnéticos (EAM 2017)</h3>
+        <p>Um ímã aproxima-se de uma esfera de ferro que está em repouso sobre uma mesa (atrito desprezível). Assinale a opção que descreve corretamente o comportamento da esfera:</p>
+
+        <label class="alternativa" data-correta="false">
+            A esfera se moverá para a direita quando o polo norte for aproximado.
+        </label>
+        <label class="alternativa" data-correta="false">
+            A esfera se moverá para a direita quando o polo sul for aproximado.
+        </label>
+        <label class="alternativa" data-correta="true">
+            A esfera se moverá em direção ao ímã, qualquer que seja o polo aproximado.
+        </label>
+        <label class="alternativa" data-correta="false">
+            A esfera permanecerá em repouso quando o polo sul for aproximado.
+        </label>
+        <label class="alternativa" data-correta="false">
+            A esfera permanecerá em repouso quando o polo norte for aproximado.
+        </label>
+
+        <div class="feedback feedback-correto">
+            <strong>✅ Correto!</strong><br>
+            O ferro é um material <em>ferromagnético</em>, formado por regiões chamadas <strong>domínios magnéticos</strong>. Em condições normais, os domínios apontam em direções diferentes e o efeito se anula. Ao aproximar um ímã, os dipolos se alinham e a esfera se torna um <strong>ímã temporário</strong>: o lado voltado para o ímã adquire um polo <strong>oposto</strong> ao que se aproxima. Como polos opostos se atraem, a esfera sempre se moverá em direção ao ímã — <strong>independentemente do polo aproximado</strong>.
+        </div>
+        <div class="feedback feedback-errado">
+            ❌ Errou! Pense sobre o que acontece com materiais como ferro quando aproximamos um ímã, seja qual for o polo... Tente de novo!
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         RODAPÉ
+         ========================================================== -->
+    <footer>
+        <p>Atividade de Física — Magnetismo | Conteúdo baseado em materiais da SEDUC-SP</p>
+    </footer>
+
+    <!-- ==========================================================
+         SCRIPT DE VERIFICAÇÃO DAS RESPOSTAS — COMPORTAMENTO AJUSTADO
+         ========================================================== -->
+    <script>
+        document.querySelectorAll('.questao').forEach(questao => {
+            const alternativas = questao.querySelectorAll('.alternativa');
+            const feedbackCorreto = questao.querySelector('.feedback-correto');
+            const feedbackErrado = questao.querySelector('.feedback-errado');
+
+            alternativas.forEach(alt => {
+                alt.addEventListener('click', () => {
+                    // Remove marcações e feedbacks anteriores
+                    alternativas.forEach(a => a.classList.remove('correta', 'errada'));
+                    feedbackCorreto.style.display = 'none';
+                    feedbackErrado.style.display = 'none';
+                    feedbackCorreto.classList.remove('correto');
+                    feedbackErrado.classList.remove('errado');
+
+                    // Verifica resposta
+                    if (alt.dataset.correta === 'true') {
+                        // ✅ ACERTOU: marca alternativa em verde e mostra explicação completa
+                        alt.classList.add('correta');
+                        feedbackCorreto.style.display = 'block';
+                        feedbackCorreto.classList.add('correto');
+                    } else {
+                        // ❌ ERROU: marca alternativa em vermelho, mostra mensagem de erro e NÃO revela a resposta
+                        alt.classList.add('errada');
+                        feedbackErrado.style.display = 'block';
+                        feedbackErrado.classList.add('errado');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+            
+            
+            
+            
+            
+            
+            
+            </p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="1" disabled>⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="1">🏠 Voltar ao Início</button>
@@ -2847,7 +3221,7 @@
 </main>
 
 <footer>
-   Professor Valter @2026 
+   @2026 Professor Valter
 </footer>
 
 </body>
