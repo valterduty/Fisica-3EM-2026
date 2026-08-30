@@ -3,7 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aulas - Conteúdo</title>
+    <title>Física 2º EM</title>
+    <style>
+        .titulo-destaque {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 2rem 0;
+            letter-spacing: -1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            
+            /* Configuração da animação */
+            animation: surgimentoSuave 1.2s ease-out forwards;
+            opacity: 0; /* Começa invisível */
+        }
+
+        /* Definição dos movimentos da animação */
+        @keyframes surgimentoSuave {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Começa um pouco abaixo */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Termina na posição original */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo-destaque">Física 2º EM</h1>
+ 
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física 2º EM</title>
     <style>
         * {
             margin: 0;
@@ -134,15 +178,151 @@
 </head>
 <body>
 
-    <h1>📚 Física 3º EM</h1>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Física 3º EM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            margin-bottom: 2.5rem;
+        }
+
+        .item-aula {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .botao-aula {
+            padding: 1rem 1.2rem;
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            width: 100%;
+        }
+
+        .botao-aula:hover {
+            background-color: #2b6cb0;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .botao-aula.ativa {
+            background-color: #2f855a;
+            box-shadow: 0 4px 14px rgba(47,133,90,0.3);
+        }
+
+        .conteudo-aula {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            margin-top: -4px;
+            display: none;
+            animation: aparece 0.4s ease;
+        }
+
+        .conteudo-aula.visivel {
+            display: block;
+        }
+
+        .conteudo-aula h2 {
+            color: #2d3748;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .navegacao {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .botao-nav {
+            padding: 0.7rem 1.1rem;
+            background-color: #744210;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .botao-nav:hover {
+            background-color: #5a350e;
+            transform: translateY(-2px);
+        }
+
+        .botao-nav:disabled {
+            background-color: #cbd5e0;
+            cursor: not-allowed;
+            transform: none;
+            opacity: 0.7;
+        }
+
+        .atalhos {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #718096;
+            text-align: center;
+            width: 100%;
+        }
+
+        @keyframes aparece {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .navegacao {
+                flex-direction: column;
+            }
+            .botao-nav {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
     <h1>3º Bimestre</h1>
+
     <!-- Aula 01 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="1">Aula 01</button>
+        <button class="botao-aula" data-aula="1">Aula 01: Marcos históricos e propriedades dos materiais magnéticos naturais</button>
         <div class="conteudo-aula" id="aula-1">
-            <h2>Aula 01: Marcos históricos e propriedades dos materiais magnéticos naturais
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 01: Marcos históricos e propriedades dos materiais magnéticos naturais</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <!-- Metadados essenciais -->
@@ -808,7 +988,7 @@
             
             
             
-            </p>
+            </p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="1" disabled>⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="1">🏠 Voltar ao Início</button>
@@ -821,13 +1001,15 @@
 
 
 
+
+
   
     <!-- Aula 02 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="2">Aula 02</button>
+        <button class="botao-aula" data-aula="2">Aula 02: Guia para as bússolas</button>
         <div class="conteudo-aula" id="aula-2">
             <h2>Aula 02: Guia para as bússolas</h2>
-            <p><!DOCTYPE html>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -1135,7 +1317,7 @@
     </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="2">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="2">🏠 Voltar ao Início</button>
@@ -1148,14 +1330,15 @@
 
 
 
+
+
   
     <!-- Aula 03 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="3">Aula 03</button>
+        <button class="botao-aula" data-aula="3">Aula 03 - O campo que ordena - Como ímãs reagem ao magnetismo uniforme</button>
         <div class="conteudo-aula" id="aula-3">
-            <h2>Aula 03 - O campo que ordena - Como ímãs reagem ao magnetismo uniforme
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 03 - O campo que ordena - Como ímãs reagem ao magnetismo uniforme</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -1441,7 +1624,7 @@
     </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="3">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="3">🏠 Voltar ao Início</button>
@@ -1455,14 +1638,14 @@
 
 
 
+
   
     <!-- Aula 04 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="4">Aula 04</button>
+        <button class="botao-aula" data-aula="4">Aula 04: Campo magnético e cargas em movimento - A força que desvia trajetórias</button>
         <div class="conteudo-aula" id="aula-4">
-            <h2>Aula 04: Campo magnético e cargas em movimento - A força que desvia trajetórias
-</h2>
-            <p>          
+            <h2>Aula 04: Campo magnético e cargas em movimento - A força que desvia trajetórias</h2>
+            <p><p>          
 
 
 
@@ -1811,7 +1994,7 @@
 
 </body>
 </html>
-</p>
+</p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="4">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="4">🏠 Voltar ao Início</button>
@@ -1824,14 +2007,15 @@
 
 
 
+
+
   
     <!-- Aula 05 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="5">Aula 05</button>
+        <button class="botao-aula" data-aula="5">Aula 05: Movimento de partículas: do lançamento oblíquo ao movimento circular</button>
         <div class="conteudo-aula" id="aula-5">
-            <h2>Aula 05: Movimento de partículas: do lançamento oblíquo ao movimento circular
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 05: Movimento de partículas: do lançamento oblíquo ao movimento circular</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -2135,7 +2319,7 @@
     </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="5">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="5">🏠 Voltar ao Início</button>
@@ -2148,14 +2332,16 @@
 
 
 
-      
+
+
+
+  
     <!-- Aula 06 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="6">Aula 06</button>
+        <button class="botao-aula" data-aula="6">Aula 06: Problemas com cargas elétricas em campo uniforme</button>
         <div class="conteudo-aula" id="aula-6">
-            <h2>Aula 06: Problemas com cargas elétricas em campo uniforme
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 06: Problemas com cargas elétricas em campo uniforme</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <!-- Configurações gerais da página -->
@@ -2465,7 +2651,7 @@
     </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="6">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="6">🏠 Voltar ao Início</button>
@@ -2479,14 +2665,14 @@
 
 
 
-      
+
+  
     <!-- Aula 07 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="7">Aula 07</button>
+        <button class="botao-aula" data-aula="7">Aula 07: Quando a corrente desvia a bússola: Oersted e o campo magnético</button>
         <div class="conteudo-aula" id="aula-7">
-            <h2>Aula 07: Quando a corrente desvia a bússola: Oersted e o campo magnético
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 07: Quando a corrente desvia a bússola: Oersted e o campo magnético</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -2757,7 +2943,7 @@
 </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="7">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="7">🏠 Voltar ao Início</button>
@@ -2770,14 +2956,16 @@
 
 
 
-      
+
+
+
+  
     <!-- Aula 08 -->
     <div class="item-aula">
-        <button class="botao-aula" data-aula="8">Aula 08</button>
+        <button class="botao-aula" data-aula="8">Aula 08: Campo magnético por corrente: resolva com a regra da mão direita</button>
         <div class="conteudo-aula" id="aula-8">
-            <h2>Aula 08: Campo magnético por corrente: resolva com a regra da mão direita
-</h2>
-            <p><!DOCTYPE html>
+            <h2>Aula 08: Campo magnético por corrente: resolva com a regra da mão direita</h2>
+            <p><p><!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -2952,7 +3140,8 @@
                 <!-- Rótulos -->
                 <text x="155" y="25" fill="#e53e3e" font-size="12">Corrente entrando</text>
                 <text x="150" y="130" fill="#2b6cb0" font-size="12">Linhas de campo B</text>
-                
+
+ <text x="155" y="220" fill="#e53e3e" font-size="12">Corrente saindo</text>
                 <!-- Setas indicando sentido -->
                 <path d="M170,120 A30,30 0 0 1 140,150" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#seta)"/>
                 <path d="M195,120 A55,55 0 0 1 140,175" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#seta)"/>
@@ -3028,7 +3217,7 @@
     </footer>
 
 </body>
-</html></p>
+</html></p></p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="8">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="8">🏠 Voltar ao Início</button>
@@ -3042,7 +3231,8 @@
 
 
 
-      
+
+  
     <!-- Aula 09 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="9">Aula 09</button>
@@ -3058,6 +3248,12 @@
         </div>
     </div>
 
+
+
+
+
+
+  
     <!-- Aula 10 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="10">Aula 10</button>
@@ -3073,6 +3269,12 @@
         </div>
     </div>
 
+
+
+
+
+
+  
     <!-- Aula 11 -->
     <div class="item-aula">
         <button class="botao-aula" data-aula="11">Aula 11</button>
@@ -3123,11 +3325,101 @@
         <button class="botao-aula" data-aula="14">Aula 14 — Conclusão</button>
         <div class="conteudo-aula" id="aula-14">
             <h2>Aula 14 — Conclusão</h2>
-            <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
+            <p>Conteúdo da Aula 14...</p>
             <div class="navegacao">
                 <button class="botao-nav btn-anterior" data-ref="14">⬅ Aula Anterior</button>
                 <button class="botao-nav btn-inicio" data-ref="14">🏠 Voltar ao Início</button>
-                <button class="botao-nav btn-proximo" data-ref="14" disabled>Próxima Aula ➡</button>
+                <button class="botao-nav btn-proximo" data-ref="14">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 15 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="15">Aula 15</button>
+        <div class="conteudo-aula" id="aula-15">
+            <h2>Aula 15</h2>
+            <p>Conteúdo da Aula 15...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="15">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="15">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="15">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 16 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="16">Aula 16</button>
+        <div class="conteudo-aula" id="aula-16">
+            <h2>Aula 16</h2>
+            <p>Conteúdo da Aula 16...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="16">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="16">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="16">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 17 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="17">Aula 17</button>
+        <div class="conteudo-aula" id="aula-17">
+            <h2>Aula 17</h2>
+            <p>Conteúdo da Aula 17...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="17">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="17">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="17">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 18 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="18">Aula 18</button>
+        <div class="conteudo-aula" id="aula-18">
+            <h2>Aula 18</h2>
+            <p>Conteúdo da Aula 18...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="18">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="18">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="18">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 19 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="19">Aula 19</button>
+        <div class="conteudo-aula" id="aula-19">
+            <h2>Aula 19</h2>
+            <p>Conteúdo da Aula 19...</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="19">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="19">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="19">Próxima Aula ➡</button>
+                <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aula 20 -->
+    <div class="item-aula">
+        <button class="botao-aula" data-aula="20">Aula 20 — Conclusão Final</button>
+        <div class="conteudo-aula" id="aula-20">
+            <h2>Aula 20 — Conclusão Final</h2>
+            <p>Conteúdo da última aula. Coloque aqui resumos, avaliações finais e materiais complementares.</p>
+            <div class="navegacao">
+                <button class="botao-nav btn-anterior" data-ref="20">⬅ Aula Anterior</button>
+                <button class="botao-nav btn-inicio" data-ref="20">🏠 Voltar ao Início</button>
+                <button class="botao-nav btn-proximo" data-ref="20" disabled>Próxima Aula ➡</button>
                 <span class="atalhos">💡 Atalhos: ← Anterior | → Próxima | Esc Voltar ao Início</span>
             </div>
         </div>
@@ -3221,7 +3513,7 @@
 </main>
 
 <footer>
-   @2026 Professor Valter
+     @2026 Professor Valter
 </footer>
 
 </body>
