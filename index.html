@@ -1,182 +1,138 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Física 3º EM</title>
-    <style>
-        .titulo-destaque {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            text-align: center;
-            background: linear-gradient(45deg, #2ecc71, #27ae60);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 2rem 0;
-            letter-spacing: -1px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+<!-- BANNER DE FÍSICA (TOPO DA PÁGINA) -->
+<div class="physics-banner-root">
+    <div class="physics-banner-container">
+        <!-- Elemento do Átomo -->
+        <div class="phys-atom-container">
+            <div class="phys-nucleus"></div>
+            <div class="phys-orbit phys-orbit-1"><div class="phys-electron"></div></div>
+            <div class="phys-orbit phys-orbit-2"><div class="phys-electron"></div></div>
+            <div class="phys-orbit phys-orbit-3"><div class="phys-electron"></div></div>
+        </div>
+        
+        <!-- Textos do Topo -->
+        <div class="physics-banner-text">
+            <h1>Física 3º EM</h1>
             
-            /* Configuração da animação */
-            animation: surgimentoSuave 1.2s ease-out forwards;
-            opacity: 0; /* Começa invisível */
-        }
+        </div>
+    </div>
+</div>
 
-        /* Definição dos movimentos da animação */
-        @keyframes surgimentoSuave {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* Começa um pouco abaixo */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0); /* Termina na posição original */
-            }
-        }
-    </style>
-</head>
-<body>
+<style>
+    /* Escopo isolado para evitar conflitos com o restante do site */
+    .physics-banner-root {
+        width: 100%;
+        background-color: #0d1117;
+        margin: 0;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, sans-serif;
+        border-bottom: 2px solid #1f242c;
+    }
+    .physics-banner-root * {
+        box-sizing: border-box;
+    }
+    .physics-banner-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        flex-wrap: wrap; /* Garante que fique responsivo em telas menores */
+    }
+    
+    /* Texto do Banner */
+    .physics-banner-text {
+        flex: 1;
+        min-width: 280px;
+        color: #ffffff;
+    }
+    .physics-banner-text h1 {
+        margin: 0 0 10px 0;
+        font-size: 2.5rem;
+        color: #58a6ff;
+        letter-spacing: 1px;
+    }
+    .physics-banner-text p {
+        margin: 0;
+        font-size: 1.1rem;
+        color: #8b949e;
+        line-height: 1.5;
+    }
 
-    <h1 class="titulo-destaque">Física 3º EM</h1>
- 
-</body>
-</html>
+    /* Gráfico do Átomo */
+    .phys-atom-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+    .phys-nucleus {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: radial-gradient(circle, #ff416c, #ff4b2b);
+        border-radius: 50%;
+        box-shadow: 0 0 15px #ff4b2b;
+        z-index: 5;
+    }
+    .phys-orbit {
+        position: absolute;
+        border: 1.5px solid rgba(0, 212, 255, 0.25);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .phys-orbit-1 { width: 160px; height: 64px; transform: rotate(0deg); }
+    .phys-orbit-2 { width: 160px; height: 64px; transform: rotate(60deg); }
+    .phys-orbit-3 { width: 160px; height: 64px; transform: rotate(-60deg); }
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Física 3º EM</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+    .phys-electron {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #00d4ff;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #00d4ff;
+    }
 
-        body {
-            background-color: #f0f4f8;
-            padding: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
+    /* Animações exclusivas (prefixadas para não chocar com outros estilos) */
+    .phys-orbit-1 .phys-electron { animation: phys-spin-1 4s linear infinite; }
+    .phys-orbit-2 .phys-electron { animation: phys-spin-2 4s linear infinite; }
+    .phys-orbit-3 .phys-electron { animation: phys-spin-3 4s linear infinite; }
 
-        h1 {
+    @keyframes phys-spin-1 {
+        0% { transform: rotate(0deg) translate(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translate(80px) rotate(-360deg); }
+    }
+    @keyframes phys-spin-2 {
+        0% { transform: rotate(0deg) translate(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translate(80px) rotate(-360deg); }
+    }
+    @keyframes phys-spin-3 {
+        0% { transform: rotate(0deg) translate(80px) rotate(0deg); }
+        100% { transform: rotate(360deg) translate(80px) rotate(-360deg); }
+    }
+
+    /* Ajuste para telas de celular */
+    @media (max-width: 600px) {
+        .physics-banner-container {
+            flex-direction: column-reverse;
             text-align: center;
-            color: #2d3748;
-            margin-bottom: 2.5rem;
+            gap: 20px;
         }
+        .physics-banner-text h1 { font-size: 2rem; }
+    }
+</style>
 
-        .item-aula {
-            margin-bottom: 1.2rem;
-            display: flex;
-            flex-direction: column;
-        }
 
-        .botao-aula {
-            padding: 1rem 1.2rem;
-            background-color: #3182ce;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-align: center;
-            width: 100%;
-        }
 
-        .botao-aula:hover {
-            background-color: #2b6cb0;
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
 
-        .botao-aula.ativa {
-            background-color: #2f855a;
-            box-shadow: 0 4px 14px rgba(47,133,90,0.3);
-        }
 
-        .conteudo-aula {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 0 0 12px 12px;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-            margin-top: -4px;
-            display: none;
-            animation: aparece 0.4s ease;
-        }
-
-        .conteudo-aula.visivel {
-            display: block;
-        }
-
-        .conteudo-aula h2 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        .navegacao {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            margin-top: 1.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
-        }
-
-        .botao-nav {
-            padding: 0.7rem 1.1rem;
-            background-color: #744210;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .botao-nav:hover {
-            background-color: #5a350e;
-            transform: translateY(-2px);
-        }
-
-        .botao-nav:disabled {
-            background-color: #cbd5e0;
-            cursor: not-allowed;
-            transform: none;
-            opacity: 0.7;
-        }
-
-        .atalhos {
-            margin-top: 0.8rem;
-            font-size: 0.85rem;
-            color: #718096;
-            text-align: center;
-            width: 100%;
-        }
-
-        @keyframes aparece {
-            from { opacity: 0; transform: translateY(-8px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 600px) {
-            .navegacao {
-                flex-direction: column;
-            }
-            .botao-nav {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-<body>
 
 
 <!DOCTYPE html>
